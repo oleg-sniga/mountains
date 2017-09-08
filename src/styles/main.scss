@@ -1,0 +1,8 @@
+body {
+    margin: 10px;
+    background: #ccc;
+}
+
+@import 'common/menu.scss';
+@import 'common/tech.scss';
+@import 'common/slider.scss';
