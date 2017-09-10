@@ -4,10 +4,34 @@ block variables
     - var title = "Welkome!"
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .wrapper.welkome--fon
+        main.main
+            .welkome
+                .welkome__cont
+                    .welkome__img
+                        .welkome__pic
+                            img.welkome__ava(src="images/img/avatar2.jpg")
+                    h1 Олег Снига
+                    p Личный сайт веб разработчика
+                    ul.socials
+                        li.socials__items
+                            a.socials__link(href="#")
+                                svg.socials__svg
+                                    use(xlink:href="images/sprites/sprite.svg#vk")
+                        li.socials__items
+                            a.socials__link(href="#")
+                                svg.socials__svg
+                                    use(xlink:href="images/sprites/sprite.svg#github")
+                        li.socials__items
+                            a.socials__link(href="#")
+                                svg.socials__svg
+                                    use(xlink:href="images/sprites/sprite.svg#in")
+                ul.menu
+                    li.menu__items
+                        a.menu__link(href="works.html") Мои работы
+                    li.menu__items
+                        a.menu__link(href="about.html") Обо мне
+                    li.menu__items
+                        a.menu__link(href="blog.html") Блог
+            button.login-btn Авторизоваться
+            .authorship © Снига Олег | создано с любовью в LoftSchool | 2017
