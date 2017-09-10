@@ -1,8 +1,16 @@
-body {
-    margin: 10px;
-    background: #ccc;
-}
+@import 'common/normalize.scss';
 
+//layout
+@import 'layout/variables.scss';
+@import 'layout/fonts.scss';
+@import 'layout/adjustment.scss';
+@import 'layout/base.scss';
+
+//pages
+@import 'pages/index.scss';
+
+//common
+@import 'common/welkome.scss';
+@import 'common/header.scss';
 @import 'common/menu.scss';
-@import 'common/tech.scss';
 @import 'common/slider.scss';

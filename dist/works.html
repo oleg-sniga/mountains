@@ -7,28 +7,54 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="styles/main.min.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.min.css">
+    <script src="/js/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Мои Работы</h1>
-    <div class="container">
-      <ul id="slides">
-        <li class="slide showing"></li>
-        <li class="slide"></li>
-        <li class="slide"></li>
-      </ul>
-      <div class="buttons">
-        <button class="controls" id="prev">&lt;</button>
-        <button class="controls" id="next">&gt;</button>
-      </div>
+    <div class="wrapper">
+      <main class="main">
+        <header class="header">
+          <div class="header__top">
+            <ul class="socials">
+              <li class="socials__items"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use xlink:href="images/sprites/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__items"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use xlink:href="images/sprites/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__items"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use xlink:href="images/sprites/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+            <button class="nav-btn"><img class="nav-btn__img" src="images/svg/hamburger.svg" alt="menu"></button>
+          </div>
+          <div class="header__center">
+            <div class="author-info">
+              <div class="welkome__img">
+                <div class="welkome__pic"><img class="welkome__ava" src="images/img/avatar2.jpg"></div>
+              </div>
+              <h1>Олег Снига</h1>
+              <p>Личный сайт веб разработчика</p>
+            </div>
+          </div>
+          <div class="header__bottom"></div>
+        </header>
+        <h1>Мои Работы</h1>
+        <div class="container">
+          <ul id="slides">
+            <li class="slide showing"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+          </ul>
+          <div class="buttons">
+            <button class="controls" id="prev">&lt;</button>
+            <button class="controls" id="next">&gt;</button>
+          </div>
+        </div>
+      </main>
     </div>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
   </body>
 </html>
