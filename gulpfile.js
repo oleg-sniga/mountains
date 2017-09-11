@@ -11,7 +11,12 @@ const aoutoprefixer = require('gulp-autoprefixer');
 
 //Images
 const imagemin = require('gulp-imagemin');
-const svgSprite = require('gulp-svg-sprites');
+
+// Svg
+const svgSprite = require('gulp-svg-sprite');
+const cheerio = require('gulp-cheerio');
+const svgmin = require('gulp-svgmin');
+const replace = require('gulp-replace');
 
 //scripts
 const gulpWebpack = require('gulp-webpack');
@@ -92,11 +97,31 @@ function images() {
 //sprites
 function svgsprite() {
   return gulp.src(paths.svgsprite.src)
-    .pipe(svgSprite({
-      svg: {
-        sprite: 'sprite.svg',
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(cheerio({
+      run: function($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
       },
-      baseSize: 16,
+      parserOptions: {
+        smlMode: true
+      }
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: 'sprite.svg',
+          example: {
+            dest: 'index.html' // демо html
+          }
+        }
+      }
     }))
     .pipe(gulp.dest(paths.svgsprite.dest));
 }
