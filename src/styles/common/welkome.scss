@@ -67,12 +67,11 @@
     &__link {
         width: 35px;
         height: 25px; 
-        display: block;
+        display: inline-block;
         opacity: .5;
         transition:all .3s ease;
         &:hover{
             opacity: 1;
-            transform: scale(1.1);
         }
     }
 }

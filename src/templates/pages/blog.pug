@@ -5,16 +5,18 @@ block variables
 
 block content
     .wrapper
+        include ../common/header.pug
         main.main
-            include ../common/header.pug
-    h1 Blog
-    ul
-        li
-            h2 Lorem, ipsum dolor.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, animi.
-        li
-            h2 Lorem, ipsum.
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, ut!
-        li
-            h2 Lorem, ipsum.
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, aperiam.
+            h1 Blog
+            ul
+                li
+                    h2 Lorem, ipsum dolor.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, animi.
+                li
+                    h2 Lorem, ipsum.
+                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, ut!
+                li
+                    h2 Lorem, ipsum.
+                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, aperiam.
+block footer
+    include ../common/footer.pug

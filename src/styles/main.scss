@@ -3,14 +3,18 @@
 //layout
 @import 'layout/variables.scss';
 @import 'layout/fonts.scss';
-@import 'layout/adjustment.scss';
 @import 'layout/base.scss';
+@import 'layout/adjustment.scss';
 
 //pages
 @import 'pages/index.scss';
+@import 'pages/works.scss';
+@import 'pages/about.scss';
 
 //common
 @import 'common/welkome.scss';
 @import 'common/header.scss';
 @import 'common/menu.scss';
 @import 'common/slider.scss';
+@import 'common/skills.scss';
+@import 'common/footer.scss';

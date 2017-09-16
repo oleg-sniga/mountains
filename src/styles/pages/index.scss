@@ -1,7 +1,10 @@
 .welkome--fon {
     background: url('../images/bg-index.jpg') top center no-repeat;
     background-size: cover;
-    position: relative
+
+    // &::after {
+    //     content: none;
+    // }
 }
 .login-btn {
     font-family: 'Roboto';
@@ -15,6 +18,7 @@
     position: absolute;
     top: 25px;
     right: 100px;
+    transition: all .4s ease;
 
     &:hover {
         background: #fff;

@@ -3,18 +3,19 @@ header.header
         ul.socials
             li.socials__items
                 a.socials__link(href="#")
-                    svg.socials__svg
+                    svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#vk")
             li.socials__items
                 a.socials__link(href="#")
-                    svg.socials__svg
+                    svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#github")
             li.socials__items
                 a.socials__link(href="#")
-                    svg.socials__svg
+                    svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#in")
         button.nav-btn
-            img.nav-btn__img(src="images/svg/hamburger.svg", alt="menu")
+            svg.nav-btn__svg
+                use(xlink:href="images/sprites/symbol/sprite.svg#hamburger")
     .header__center
         .author-info
             .welkome__img
@@ -23,3 +24,9 @@ header.header
             h1 Олег Снига
             p Личный сайт веб разработчика
     .header__bottom
+        a.arrow-down__link(href="#")
+            svg.arrow-down__svg
+                use(xlink:href="images/sprites/symbol/sprite.svg#arrow_down")
+//- .triangles
+//-     .triangles__left
+//-     .triangles__right
