@@ -4,5 +4,54 @@ block variables
     - var title = 'Мои Работы'
 
 block content
-    h1 Мои Работы
-    include ../common/slider.pug
+    .wrapper
+        include ../common/header.pug
+        main.main
+            .block-title
+                .triangles
+                    .triangles__left.works--triangle-left
+                    .triangles__right.works--triangle-right
+                img.block-title__img(src="images/svg/works_header.svg")
+                h1.main-title Мои работы
+            include ../common/slider.pug
+            section.reviews
+                .block-title.block-title--bg-white
+                    img.block-title__img(src="images/svg/about_header.svg")
+                    h2.main-title Что обо мне<br>говорят
+                .reviews__top
+                    .comment
+                        .comment__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .comment__info
+                            .comment__img
+                                .comment__pic
+                                    img.comment__avatar(src="images/img/user-1.jpg")
+                            .comment__author
+                                .comment__name Ковальчук Дмитрий
+                                .comment__job основатель Loftschool
+                    .comment
+                        .comment__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        .comment__info
+                            .comment__img
+                                .comment__pic
+                                    img.comment__avatar(src="images/img/user-2.jpg")
+                            .comment__author
+                                .comment__name Сабанцев Владимир
+                                .comment__job преподаватель
+                .reviews__center
+                    .feedback
+                        //- .feedback__blur
+                        h2.sub-title.sub-titel--margin Связаться со мной
+                        form.feedback-form(method="post",action="mail.php")
+                            .feedback-form__block
+                                input.feedback-form__input(type="text",name="name",placeholder="Имя")
+                                input.feedback-form__input(type="text",name="email",placeholder="Email")
+                                textarea.feedback-form__textarea(name="text",placeholder="Ваше сообщение")
+                        .feedback-btn
+                            input.feedback-btn__input(type="submit",name="submit",value="Отправить")
+                            input.feedback-btn__input(type="button",name="email",value="Очистить")
+                .reviews__bottom
+                    a.arrow-up__link(href="#")
+                        svg.arrow-up__svg
+                            use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up")
+block footer
+    include ../common/footer.pug

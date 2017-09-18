@@ -1,0 +1,110 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.about__left,
+.about__right {
+    width: 50%;
+    padding: 20px;
+}
+.about__left {
+    background: $Grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about-triangle__left {
+    background-image: linear-gradient(to bottom left, transparent 50%, $Grey 51%);
+  }
+.about-triangle__right {
+    background-image: linear-gradient(to bottom right, transparent 50%, #eeebdf 51%);
+}
+.about__title,
+.about__info {
+    width: 50%;
+}
+.about__title {
+    padding-right: 20px;
+}
+.block-title--about {
+    background: $Grey;
+    height: 120px;
+    overflow: hidden;
+}
+.about__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.about__avatar {
+    width: 100%;
+}
+.sub-title--margin {
+    margin-bottom: 30px;
+}
+
+.about__right {
+    background: #eeebdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+//Секция с картой и контактными данными
+.contacts {
+    width: 100%;
+    height: 950px;
+    position: relative;
+}
+.google-map {
+    background:$Grey url('../images/bg-map.jpg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.data-contact {
+    background: rgba(255, 255, 255, .7);
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    &__list {
+        font-family: 'Roboto';
+        font-size: 16px;
+        color: $textColor;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__items {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__svg {
+        width: 25px;
+        height: 25px;
+        fill: $mintBlue;
+        margin-right: 10px;
+    }
+}

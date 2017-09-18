@@ -7,23 +7,220 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="styles/main.min.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.min.css">
+    <script src="/js/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Далеко-далеко, за словесными.</h1>
-    <p>I am</p>
-    <ul class="tech">
-      <li><img src="img/github.svg" alt=""></li>
-      <li><img src="img/skype.svg" alt=""></li>
-      <li><img src="img/vk.svg" alt=""></li>
-    </ul>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <ul class="socials">
+            <li class="socials__items"><a class="socials__link" href="#">
+                <svg class="socials__svg header--social-svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__items"><a class="socials__link" href="#">
+                <svg class="socials__svg header--social-svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__items"><a class="socials__link" href="#">
+                <svg class="socials__svg header--social-svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <button class="nav-btn">
+            <svg class="nav-btn__svg">
+              <use xlink:href="images/sprites/symbol/sprite.svg#hamburger"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="header__center">
+          <div class="author-info">
+            <div class="welkome__img">
+              <div class="welkome__pic"><img class="welkome__ava" src="images/img/avatar2.jpg"></div>
+            </div>
+            <h1>Олег Снига</h1>
+            <p>Личный сайт веб разработчика</p>
+          </div>
+        </div>
+        <div class="header__bottom"><a class="arrow-down__link" href="#">
+            <svg class="arrow-down__svg">
+              <use xlink:href="images/sprites/symbol/sprite.svg#arrow_down"></use>
+            </svg></a></div>
+      </header>
+      <main class="main">
+        <section class="about">
+          <div class="triangles">
+            <div class="triangles__left about-triangle__left"></div>
+            <div class="triangles__right about-triangle__right"></div>
+          </div>
+          <div class="about__left">
+            <div class="about__title">
+              <div class="block-title block-title--about"><img class="block-title__img" src="images/svg/about_header.svg">
+                <h1 class="main-title">Обо мне</h1>
+              </div>
+            </div>
+            <div class="about__info">
+              <div class="about__img"><img class="about__avatar" src="images/img/avatar2.jpg"></div>
+              <h2 class="sub-title sub-title--margin">Кто я</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
+            </div>
+          </div>
+          <div class="about__right">
+            <h2 class="sub-title sub-title--margin">Чем я могу вам помочь</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?</p>
+            <ul class="skills">
+              <li class="skills__items">
+                <h3 class="skills__title">Frontend</h3>
+                <ul class="circles">
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-75" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">HTML5</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-70" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">CSS3</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-45" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">JavaScript &amp; jQuery</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__items">
+                <h3 class="skills__title">Backend</h3>
+                <ul class="circles">
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-45" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">PHP</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-65" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">mySQL</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-45" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">Node.js &amp; npm</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-45" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">Mongo.db</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills__items">
+                <h3 class="skills__title">WorkFlow</h3>
+                <ul class="circles">
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-75" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">Git</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-65" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">Gulp</span>
+                  </li>
+                  <li class="circles__items">
+                    <svg class="circles__svg" viewBox="0 0 110 110">
+                      <circle class="circles__svg-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                      <circle class="circles__svg-second circle-95" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                    </svg><span class="circles__text">Bower</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="google-map"></div>
+          <div class="data-contact">
+            <h2 class="sub-title">Контакты</h2>
+            <ul class="data-contact__list">
+              <li class="data-contact__items">mast_dvj
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#skype"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">oleg.sniga@gmail.com
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#envelope"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">+34 649 42 14 14
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#phone"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">Испания, обл. Таррагона, г. Торредембарра
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#map_marker"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer__top">
+        <ul class="footer-nav">
+          <li class="footer-nav__items"><a class="footer-nav__link" href="works.html">Мои работы</a></li>
+          <li class="footer-nav__items"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
+          <li class="footer-nav__items"><a class="footer-nav__link" href="blog.html">Блог</a></li>
+          <li class="footer-nav__items"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
+        </ul>
+        <ul class="footer-socials">
+          <li class="footer-socials__items"><a class="footer-socials__link" href="#">
+              <svg class="footer-socials__svg" width="18" height="18">
+                <use xlink:href="images/sprites/symbol/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="footer-socials__items"><a class="footer-socials__link" href="#">
+              <svg class="footer-socials__svg" width="18" height="18">
+                <use xlink:href="images/sprites/symbol/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="footer-socials__items"><a class="footer-socials__link" href="#">
+              <svg class="footer-socials__svg" width="18" height="18">
+                <use xlink:href="images/sprites/symbol/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__text-left">Я веб-разработчик из Таррагоны и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+        <div class="footer__text-right">© Снига Олег | создано с любовью в LoftSchool | 2017</div>
+      </div>
+      <div class="hamburger-nav">
+        <div class="hamburger-nav__close">
+          <svg class="hamburger-nav__stick--1" width="35" height="35" viewBox="0 0 30 30">
+            <line x1="0" y1="30" x2="30" y2="0" stroke-width="5" stroke="white"></line>
+            <line x1="30" y1="30" x2="0" y2="0" stroke-width="5" stroke="white"></line>
+          </svg>
+        </div>
+        <ul class="hamburger-nav__list">
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="works.html">Мои работы</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="blog.html">Блог</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="about.html">Обо Мне</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="index.html">Авторизация</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

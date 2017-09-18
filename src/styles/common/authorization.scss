@@ -1,0 +1,140 @@
+.authorization {
+    background:rgba(255,255,255, .75);
+    width: 380px;
+    display: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.sub-title--authorization {
+    margin: 30px auto;
+}
+.authorization__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.authorization__column {
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: $textColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // outline: 1px solid black;
+    margin: 0 20px 20px 20px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+.authorization__label {
+    // outline: 1px solid green;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.authorization__input {
+    border: 1px solid transparent;
+    flex-grow: 1;
+    padding: 14px 16px;
+}
+.authorization__title {
+    margin-left: 10px;
+}
+
+.authorization__img {
+    background: #f0efe9;
+    padding: 13px 15px;
+}
+.authorization__svg {
+    fill: #c4cbcd;
+}
+.authorization__checkbox-title {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.authorization__checkbox {
+    display: none;
+
+    &:checked + .authorization__fake-check .authorization__fake-check__svg {
+        display: block;
+    }
+}
+.authorization__fake-check {
+    background: $mintBlue;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    &__svg {
+        display: none;
+        fill: #fff;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+//Капча радио кнопок
+.authorization__radio {
+    display: none;
+
+    &:checked + .authorization__fake-radio {
+        &::after {
+            display: block;
+        }
+    }
+}
+.authorization__fake-radio {
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #cdcdcd;
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: none;
+        background: $mintBlue;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.authorization__column--radio {
+    margin-bottom: 40px;
+}
+.authorization__btn {
+    width: 50%;
+    border: none;
+    flex-grow: 1;
+    padding: 15px 10px;
+    background: $mintBlue;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+
+    &:first-child {
+        border-right: 2px solid #6fd1c6;
+    }
+    &:hover {
+        background: $DmintBlue;
+    }
+}

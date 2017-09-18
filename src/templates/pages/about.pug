@@ -4,12 +4,104 @@ block variables
     - var title = 'About me'
 
 block content
-    h1 Далеко-далеко, за словесными.
-    p I am
-    ul.tech
-        li
-            img(src="img/github.svg", alt="")
-        li
-            img(src="img/skype.svg", alt="")
-        li
-            img(src="img/vk.svg", alt="")
+    .wrapper
+        include ../common/header.pug
+        main.main
+            section.about
+                .triangles
+                    .triangles__left.about-triangle__left
+                    .triangles__right.about-triangle__right
+                .about__left
+                    .about__title
+                        .block-title.block-title--about
+                            img.block-title__img(src="images/svg/about_header.svg")
+                            h1.main-title Обо мне
+                    .about__info
+                        .about__img
+                            img.about__avatar(src="images/img/avatar2.jpg")
+                        h2.sub-title.sub-title--margin Кто я
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
+                .about__right
+                    h2.sub-title.sub-title--margin Чем я могу вам помочь
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
+                    ul.skills
+                        li.skills__items
+                            h3.skills__title Frontend
+                            ul.circles
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-75(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text HTML5
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-70(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text CSS3
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-45(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text JavaScript &amp; jQuery
+                        li.skills__items
+                            h3.skills__title Backend
+                            ul.circles
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-45(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text PHP
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-65(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text mySQL
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-45(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text Node.js &amp; npm
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-45(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text Mongo.db
+                        li.skills__items
+                            h3.skills__title WorkFlow
+                            ul.circles
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-75(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text Git
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-65(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text Gulp
+                                li.circles__items
+                                    svg.circles__svg(viewBox="0 0 110 110")
+                                        circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
+                                        circle.circles__svg-second.circle-95(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
+                                    span.circles__text Bower
+            section.contacts
+                .google-map
+                .data-contact
+                    h2.sub-title Контакты
+                    ul.data-contact__list
+                        li.data-contact__items mast_dvj
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#skype")
+                        li.data-contact__items oleg.sniga@gmail.com
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#envelope")
+                        li.data-contact__items +34 649 42 14 14
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#phone")
+                        li.data-contact__items Испания, обл. Таррагона, г. Торредембарра
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#map_marker")
+block footer
+    include ../common/footer.pug
