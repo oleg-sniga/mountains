@@ -50,8 +50,11 @@
       </header>
       <main class="main">
         <section class="about">
+          <div class="triangles">
+            <div class="triangles__left about-triangle__left"></div>
+            <div class="triangles__right about-triangle__right"></div>
+          </div>
           <div class="about__left">
-            <div class="about-triangle__left"></div>
             <div class="about__title">
               <div class="block-title block-title--about"><img class="block-title__img" src="images/svg/about_header.svg">
                 <h1 class="main-title">Обо мне</h1>
@@ -59,14 +62,13 @@
             </div>
             <div class="about__info">
               <div class="about__img"><img class="about__avatar" src="images/img/avatar2.jpg"></div>
-              <h2 class="sub-titel sub-titel--margin">Кто я</h2>
+              <h2 class="sub-title sub-title--margin">Кто я</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
             </div>
           </div>
           <div class="about__right">
-            <div class="about-triangle__right"></div>
-            <h2 class="sub-titel sub-titel--margin">Чем я могу вам помочь</h2>
+            <h2 class="sub-title sub-title--margin">Чем я могу вам помочь</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?</p>
             <ul class="skills">
@@ -148,6 +150,34 @@
             </ul>
           </div>
         </section>
+        <section class="contacts">
+          <div class="google-map"></div>
+          <div class="data-contact">
+            <h2 class="sub-title">Контакты</h2>
+            <ul class="data-contact__list">
+              <li class="data-contact__items">mast_dvj
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#skype"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">oleg.sniga@gmail.com
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#envelope"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">+34 649 42 14 14
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#phone"></use>
+                </svg>
+              </li>
+              <li class="data-contact__items">Испания, обл. Таррагона, г. Торредембарра
+                <svg class="data-contact__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#map_marker"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
     </div>
     <footer class="footer">
@@ -156,7 +186,7 @@
           <li class="footer-nav__items"><a class="footer-nav__link" href="works.html">Мои работы</a></li>
           <li class="footer-nav__items"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
           <li class="footer-nav__items"><a class="footer-nav__link" href="blog.html">Блог</a></li>
-          <li class="footer-nav__items"><a class="footer-nav__link" href="#">Авторизация</a></li>
+          <li class="footer-nav__items"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
         </ul>
         <ul class="footer-socials">
           <li class="footer-socials__items"><a class="footer-socials__link" href="#">
@@ -176,6 +206,20 @@
       <div class="footer__bottom">
         <div class="footer__text-left">Я веб-разработчик из Таррагоны и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
         <div class="footer__text-right">© Снига Олег | создано с любовью в LoftSchool | 2017</div>
+      </div>
+      <div class="hamburger-nav">
+        <div class="hamburger-nav__close">
+          <svg class="hamburger-nav__stick--1" width="35" height="35" viewBox="0 0 30 30">
+            <line x1="0" y1="30" x2="30" y2="0" stroke-width="5" stroke="white"></line>
+            <line x1="30" y1="30" x2="0" y2="0" stroke-width="5" stroke="white"></line>
+          </svg>
+        </div>
+        <ul class="hamburger-nav__list">
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="works.html">Мои работы</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="blog.html">Блог</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="about.html">Обо Мне</a></li>
+          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="index.html">Авторизация</a></li>
+        </ul>
       </div>
     </footer>
   </body>

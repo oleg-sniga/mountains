@@ -8,8 +8,10 @@ block content
         include ../common/header.pug
         main.main
             section.about
+                .triangles
+                    .triangles__left.about-triangle__left
+                    .triangles__right.about-triangle__right
                 .about__left
-                    .about-triangle__left
                     .about__title
                         .block-title.block-title--about
                             img.block-title__img(src="images/svg/about_header.svg")
@@ -17,12 +19,11 @@ block content
                     .about__info
                         .about__img
                             img.about__avatar(src="images/img/avatar2.jpg")
-                        h2.sub-titel.sub-titel--margin Кто я
+                        h2.sub-title.sub-title--margin Кто я
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
                 .about__right
-                    .about-triangle__right
-                    h2.sub-titel.sub-titel--margin Чем я могу вам помочь
+                    h2.sub-title.sub-title--margin Чем я могу вам помочь
                     p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
                     p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
                     ul.skills
@@ -85,5 +86,22 @@ block content
                                         circle.circles__svg-first(r="45",cx="50%",cy="50%",fill="none")
                                         circle.circles__svg-second.circle-95(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)")
                                     span.circles__text Bower
+            section.contacts
+                .google-map
+                .data-contact
+                    h2.sub-title Контакты
+                    ul.data-contact__list
+                        li.data-contact__items mast_dvj
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#skype")
+                        li.data-contact__items oleg.sniga@gmail.com
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#envelope")
+                        li.data-contact__items +34 649 42 14 14
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#phone")
+                        li.data-contact__items Испания, обл. Таррагона, г. Торредембарра
+                            svg.data-contact__svg
+                                use(xlink:href="images/sprites/symbol/sprite.svg#map_marker")
 block footer
     include ../common/footer.pug

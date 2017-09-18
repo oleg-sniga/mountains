@@ -8,13 +8,16 @@ block content
         include ../common/header.pug
         main.main
             .block-title
+                .triangles
+                    .triangles__left.works--triangle-left
+                    .triangles__right.works--triangle-right
                 img.block-title__img(src="images/svg/works_header.svg")
                 h1.main-title Мои работы
             include ../common/slider.pug
-            .block-title.block-title--bg-white
-                img.block-title__img(src="images/svg/about_header.svg")
-                h2.main-title Что обо мне<br>говорят
             section.reviews
+                .block-title.block-title--bg-white
+                    img.block-title__img(src="images/svg/about_header.svg")
+                    h2.main-title Что обо мне<br>говорят
                 .reviews__top
                     .comment
                         .comment__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
@@ -37,7 +40,7 @@ block content
                 .reviews__center
                     .feedback
                         //- .feedback__blur
-                        h2.sub-titel.sub-titel--margin Связаться со мной
+                        h2.sub-title.sub-titel--margin Связаться со мной
                         form.feedback-form(method="post",action="mail.php")
                             .feedback-form__block
                                 input.feedback-form__input(type="text",name="name",placeholder="Имя")

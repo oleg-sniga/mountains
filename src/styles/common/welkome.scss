@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 .welkome__cont {
-    background:rgba(255,255,255, .85);
+    background:rgba(255,255,255, .75);
     padding: 40px;
     text-align: center;
     color: $textColor;
@@ -38,7 +38,7 @@
     position: relative;
 }
 .welkome__ava {
-    height: 100%;
+    width: 100%;
     position: absolute;
 
     top: 50%;
@@ -82,17 +82,16 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    opacity: .85;
 
     &__items {
-        background: $mintBlue;
+        background: rgba(0,191,165, .75);
         border-right:2px solid #6fd1c6;
         transition: all .3s ease;
         &:last-child {
             border-right: none;
         }
         &:hover{
-            background: $DmintBlue;
+            background: rgba(0,150,136, .75);
         }
     }
     &__link {
