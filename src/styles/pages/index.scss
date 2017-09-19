@@ -1,11 +1,56 @@
+/* entire container, keeps perspective */
+.flip-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+	perspective: 1000px;
+}
+
+.flipper--active {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 380px;
+    height: 400px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
 .welkome--fon {
     background: url('../images/bg-index.jpg') top center no-repeat;
     background-size: cover;
-
-    // &::after {
-    //     content: none;
-    // }
 }
+
 .login-btn {
     font-family: 'Roboto';
     font-size: 16px;
@@ -24,6 +69,7 @@
         background: #fff;
         color: $mintBlue;
     }
+    
 }
 
 .authorship {

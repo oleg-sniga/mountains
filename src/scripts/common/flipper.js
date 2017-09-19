@@ -1,8 +1,4 @@
-const $ = require('jquery');// если будет нужен
 
-
-const slider = require('./common/slider');
-// const slider = require('./common/flipper');
 function flipperInit(){
     var Flip = $('.flipper');
 
@@ -17,7 +13,6 @@ function flipperInit(){
     });
     $('.authorization--index').on('click',function(e){
         e.preventDefault;
-
         if (Flip.hasClass('flipper--active')) {
             Flip.removeClass('flipper--active');
         } else {
@@ -25,6 +20,6 @@ function flipperInit(){
         }
     });
 }
-flipperInit();
 
-// slider();
+
+module.exports = flipperInit;

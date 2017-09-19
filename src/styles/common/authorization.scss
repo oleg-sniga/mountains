@@ -1,18 +1,37 @@
 .authorization {
-    background:rgba(255,255,255, .75);
-    width: 380px;
-    display: none;
+    // background: rgba(255,255,255, .8);
+    height: 100%;
+    width: 100%;
     text-align: center;
     border-radius: 4px;
+    overflow: hidden;
 }
+
+
+// .authorization {
+//     width: 380px;
+//     height: 400px;
+//     text-align: center;
+//     border-radius: 4px;
+
+//     position: absolute; /* Абсолютное позиционирование */
+//     top: 0; bottom: 0; /* Задаём так равную высоту */
+//     opacity: 0;
+//     transition: 1s;
+// }
 
 .sub-title--authorization {
     margin: 30px auto;
 }
 .authorization__form {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+.authorization__bg {
+    background:rgba(255,255,255, .8);
+    flex-grow: 1;
 }
 .authorization__column {
     font-family: 'Roboto';
@@ -120,12 +139,13 @@
 .authorization__column--radio {
     margin-bottom: 40px;
 }
+
 .authorization__btn {
     width: 50%;
     border: none;
     flex-grow: 1;
-    padding: 15px 10px;
-    background: $mintBlue;
+    padding: 13px 10px;
+    background: rgba(0,191,165, .8);
     font-family: 'Roboto';
     font-size: 16px;
     color: #fff;
@@ -135,6 +155,6 @@
         border-right: 2px solid #6fd1c6;
     }
     &:hover {
-        background: $DmintBlue;
+        background: rgba(0,150,136, .8);
     }
 }
