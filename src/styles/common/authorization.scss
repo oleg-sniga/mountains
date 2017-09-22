@@ -1,27 +1,13 @@
 .authorization {
-    // background: rgba(255,255,255, .8);
     height: 100%;
     width: 100%;
     text-align: center;
-    border-radius: 4px;
+    border-radius: rem(4px);
     overflow: hidden;
 }
 
-
-// .authorization {
-//     width: 380px;
-//     height: 400px;
-//     text-align: center;
-//     border-radius: 4px;
-
-//     position: absolute; /* Абсолютное позиционирование */
-//     top: 0; bottom: 0; /* Задаём так равную высоту */
-//     opacity: 0;
-//     transition: 1s;
-// }
-
 .sub-title--authorization {
-    margin: 30px auto;
+    margin: rem(30px) auto;
 }
 .authorization__form {
     height: 100%;
@@ -35,46 +21,44 @@
 }
 .authorization__column {
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: rem(16px);
     color: $textColor;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    // outline: 1px solid black;
-    margin: 0 20px 20px 20px;
+    margin: 0 rem(20px) rem(20px) rem(20px);
 
     &:last-child {
         margin: 0;
     }
 }
 .authorization__label {
-    // outline: 1px solid green;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    border-radius: rem(4px);
     overflow: hidden;
 }
 .authorization__input {
     border: 1px solid transparent;
     flex-grow: 1;
-    padding: 14px 16px;
+    padding: rem(14px) rem(16px);
 }
 .authorization__title {
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .authorization__img {
     background: #f0efe9;
-    padding: 13px 15px;
+    padding: rem(13px) rem(15px);
 }
 .authorization__svg {
     fill: #c4cbcd;
 }
 .authorization__checkbox-title {
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
     font-weight: bold;
 }
 .authorization__checkbox {
@@ -87,16 +71,16 @@
 .authorization__fake-check {
     background: $mintBlue;
     cursor: pointer;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
+    border-radius: rem(4px);
+    width: rem(20px);
+    height: rem(20px);
     position: relative;
 
     &__svg {
         display: none;
         fill: #fff;
-        width: 12px;
-        height: 12px;
+        width: rem(12px);
+        height: rem(12px);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -118,17 +102,17 @@
     background: #fff;
     cursor: pointer;
     border-radius: 50%;
-    border: 2px solid #cdcdcd;
-    width: 20px;
-    height: 20px;
+    border: rem(2px) solid #cdcdcd;
+    width: rem(20px);
+    height: rem(20px);
     position: relative;
 
     &::after {
         content: '';
         display: none;
         background: $mintBlue;
-        width: 8px;
-        height: 8px;
+        width: rem(8px);
+        height: rem(8px);
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -137,22 +121,22 @@
     }
 }
 .authorization__column--radio {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 }
 
 .authorization__btn {
     width: 50%;
     border: none;
     flex-grow: 1;
-    padding: 13px 10px;
+    padding: rem(13px) rem(10px);
     background: rgba(0,191,165, .8);
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: rem(16px);
     color: #fff;
     cursor: pointer;
 
     &:first-child {
-        border-right: 2px solid #6fd1c6;
+        border-right: rem(2px) solid #6fd1c6;
     }
     &:hover {
         background: rgba(0,150,136, .8);

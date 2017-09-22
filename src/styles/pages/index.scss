@@ -5,7 +5,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
 
-	perspective: 1000px;
+	perspective: rem(1000px);
 }
 
 .flipper--active {
@@ -13,8 +13,8 @@
 }
 
 .flip-container, .front, .back {
-	width: 380px;
-    height: 400px;
+	width: rem(380px);
+    height: rem(400px);
 }
 
 /* flip speed goes here */
@@ -53,17 +53,23 @@
 
 .login-btn {
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: rem(16px);
     background: transparent;
     border: 1px solid #fff;
-    border-radius: 4px;
-    padding: 10px 25px;
+    border-radius: rem(4px);
+    padding: rem(10px) rem(25px);
     color: #fff;
     cursor: pointer;
     position: absolute;
-    top: 25px;
-    right: 100px;
+    top: rem(25px);
+    right: rem(100px);
     transition: all .4s ease;
+
+    @include phones {
+        padding: rem(12px) rem(25px);
+        right: 50%;
+        transform: translateX(50%);
+    }
 
     &:hover {
         background: #fff;
@@ -74,12 +80,12 @@
 
 .authorship {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 rem(20px);
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 200;
     color: #fff;
     text-align: center;
     position: absolute;
-    bottom: 40px;
+    bottom: rem(40px);
 }

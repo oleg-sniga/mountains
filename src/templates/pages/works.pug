@@ -6,7 +6,7 @@ block variables
 block content
     .wrapper
         include ../common/header.pug
-        main.main
+        main.main#main
             .block-title
                 .triangles
                     .triangles__left.works--triangle-left
@@ -50,7 +50,7 @@ block content
                             input.feedback-btn__input(type="submit",name="submit",value="Отправить")
                             input.feedback-btn__input(type="button",name="email",value="Очистить")
                 .reviews__bottom
-                    a.arrow-up__link(href="#")
+                    a.arrow-up__link(href="#header")
                         svg.arrow-up__svg
                             use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up")
 block footer

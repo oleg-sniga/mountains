@@ -3,6 +3,7 @@
 //layout
 @import 'layout/variables.scss';
 @import 'layout/fonts.scss';
+@import 'layout/mixin.scss';
 @import 'layout/base.scss';
 @import 'layout/adjustment.scss';
 
@@ -16,7 +17,6 @@
 @import 'common/welkome.scss';
 @import 'common/header.scss';
 @import 'common/authorization.scss';
-@import 'common/menu.scss';
 @import 'common/slider.scss';
 @import 'common/skills.scss';
 @import 'common/footer.scss';

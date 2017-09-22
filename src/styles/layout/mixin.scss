@@ -25,3 +25,31 @@
 @function rem($px) {
   @return $px / 16px+0rem;
 }
+
+@mixin screen1280 {
+	@media screen and (max-width: $screen1280) {
+	  @content;
+	}
+  }
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+	  @content;
+	}
+  }
+  
+  @mixin phones {
+	@media screen and (max-width: $phones) {
+	  @content;
+	}
+  }
+  @mixin mphones {
+	@media screen and (max-width: $mphones) {
+	  @content;
+	}
+  }
+  @mixin allheight {
+	@media screen and (max-height: $allheight) {
+	  @content;
+	}
+  }

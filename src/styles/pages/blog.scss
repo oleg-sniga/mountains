@@ -2,53 +2,73 @@
     background: #fff;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: relative;
 }
 
 .blog__left,
 .blog__right {
-    // border: 1px solid black;
-    margin-top: 40px;
+    margin-top: rem(40px);
+    &::after {
+        content: '';
+        height: rem(240px);
+        width: 100%;
+        display: block;
+    }
 }
 .blog__left {
-    width: 22%;
+    width: 25%;
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    padding-right: 5px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: rem(20px);
+    padding-right: rem(5px);
+    padding-left: rem(5px);
+    overflow: hidden;
+
+    @include tablets {
+        width: 0;
+        padding: 0;
+    }
 }
 .blog__right {
     width: 70%;
-    padding: 25px;
+    padding: rem(25px);
     padding-right: 14%;
-    margin-left: 80px;
+    // margin-left: rem(80px);
+    @include tablets {
+        width: 100%;
+        margin: 0;
+    }
+    @include mphones {
+        padding: 10px;
+    }
 }
 
 .blog-nav {
 
     &__list {
-        padding-top: 10px;
+        padding-top: rem(10px);
     }
     &__items {
-        margin-bottom: 10px;
-        // outline: 1px solid red;
+        margin-bottom: rem(10px);
         text-align: right;
     }
     &__link {
         display: inline-block;
         font-family: 'Roboto';
-        font-size: 16px;
+        font-size: rem(16px);
         font-weight: bold;
         color:$textColor;
         transition: color .3s ease;
-        padding: 12px;
-        padding-right: 15px;
-        border-right: 4px solid transparent;
+        padding: rem(12px);
+        padding-right: rem(15px);
+        border-right: rem(4px) solid transparent;
 
         &:hover, &--active {
             color: $mintBlue;
-            border-right: 4px solid $mintBlue;
+            border-right: rem(4px) solid $mintBlue;
         }
     }
     &__link--active {
@@ -57,25 +77,25 @@
 }
 
 .sub-title--article {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     &::before, &::after {
         content: none;
     }
 }
 .article {
-    border-bottom: 5px solid #f1f1f2;
-    padding-bottom: 70px;
-    margin-bottom: 70px;
+    border-bottom: rem(5px) solid #f1f1f2;
+    padding-bottom: rem(70px);
+    margin-bottom: rem(70px);
     &:last-child {
         border-bottom:none;
         padding-bottom: 0;
     }
     &__date {
         font-family: 'Roboto';
-        font-size: 16px;
+        font-size: rem(16px);
         font-weight: 300;
         color: $mintBlue;
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
     }
     &__text {
         overflow: hidden;

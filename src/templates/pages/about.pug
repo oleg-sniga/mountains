@@ -6,7 +6,7 @@ block variables
 block content
     .wrapper
         include ../common/header.pug
-        main.main
+        main.main#main
             section.about
                 .triangles
                     .triangles__left.about-triangle__left
@@ -23,9 +23,10 @@ block content
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
                 .about__right
-                    h2.sub-title.sub-title--margin Чем я могу вам помочь
-                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
-                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
+                    .about__right-content
+                        h2.sub-title.sub-title--margin Чем я могу вам помочь
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis nostrum dolorum voluptates in ab odit iure nisi dolore ut?
                     ul.skills
                         li.skills__items
                             h3.skills__title Frontend

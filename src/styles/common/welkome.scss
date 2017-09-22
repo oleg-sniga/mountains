@@ -1,50 +1,42 @@
 .welkome {
-    // background: rgba(255,255,255, .8);
     height: 100%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: rem(4px);
     overflow: hidden;
 }
 
 .about-me {
-    // display: none;
-    width: 380px;
-    height: 400px;
-    
-
-    // position: absolute; /* Абсолютное позиционирование */
-    // top: 0; bottom: 0; /* Задаём так равную высоту */
-    // transition: 1s;
+    width: rem(380px);
+    height: rem(400px);
 }
 .welkome__cont {
     background:rgba(255,255,255, .8);
-    padding: 40px;
+    padding: rem(40px);
     text-align: center;
     color: $textColor;
 
     h1 {
         font-family: 'Roboto';
-        font-size: 28px;
-        margin: 10px 0 0;
+        font-size: rem(28px);
+        margin: rem(10px) 0 0;
     }
     p {
-        margin-bottom: 40px;
+        margin-bottom: rem(40px);
         font-family: 'Roboto';
-        font-size: 16px;
+        font-size: rem(16px);
     }
 }
 
 .welkome__img {
-    height: 140px;
+    // height: rem(140px);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
-    // outline: 1px solid green;
+    margin-bottom: rem(15px);
 }
 .welkome__pic {
-    height: 140px;
-    width: 140px;
+    height: rem(140px);
+    width: rem(140px);
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -63,21 +55,21 @@
     justify-content: center;
 
     &__items {
-        margin-left: 25px;
+        margin-left: rem(25px);
         &:first-child {
             margin-left: 0;
         }
     }
     &__svg {
         fill: $mintBlue;
-        width: 35px;
-        height: 25px;
+        width: rem(35px);
+        height: rem(25px);
         display: block;
     }
 
     &__link {
-        width: 35px;
-        height: 25px; 
+        width: rem(35px);
+        height: rem(25px); 
         display: inline-block;
         opacity: .5;
         transition:all .3s ease;
@@ -97,7 +89,7 @@
     &__items {
         flex-grow: 1;
         background: rgba(0,191,165, .8);
-        border-right:2px solid #6fd1c6;
+        border-right:rem(2px) solid #6fd1c6;
         transition: all .3s ease;
         text-align: center;
         &:last-child {
@@ -109,9 +101,9 @@
     }
     &__link {
         font-family: 'Roboto';
-        font-size: 16px;
+        font-size: rem(16px);
         font-weight: 500;
-        padding: 13px 0;
+        padding: rem(13px) 0;
         display: block;
         white-space: nowrap;
     }
