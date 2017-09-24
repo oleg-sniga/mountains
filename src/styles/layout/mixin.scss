@@ -30,7 +30,7 @@
 	@media screen and (max-width: $screen1280) {
 	  @content;
 	}
-  }
+}
 
 @mixin tablets {
 	@media screen and (max-width: $tablets) {
@@ -38,18 +38,18 @@
 	}
   }
   
-  @mixin phones {
+@mixin phones {
 	@media screen and (max-width: $phones) {
-	  @content;
+		@content;
 	}
-  }
-  @mixin mphones {
+}
+@mixin mphones {
 	@media screen and (max-width: $mphones) {
-	  @content;
+		@content;
 	}
-  }
-  @mixin allheight {
-	@media screen and (max-height: $allheight) {
-	  @content;
+}
+@mixin minHeight {
+	@media screen and (max-height: $minHeight) and (min-width: 600px){
+		@content;
 	}
-  }
+}

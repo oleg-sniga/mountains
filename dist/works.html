@@ -29,10 +29,20 @@
                 </svg></a></li>
           </ul>
           <button class="nav-btn">
-            <svg class="nav-btn__svg">
-              <use xlink:href="images/sprites/symbol/sprite.svg#hamburger"></use>
+            <svg class="nav-btn__svg" width="35" height="35" viewBox="0 0 35 35" preserveaspectratio="none">
+              <line class="nav-btn__line" id="nav-btn__line-1" x1="0" y1="3" x2="35" y2="3" stroke-width="4" stroke="white"></line>
+              <line class="nav-btn__line" id="nav-btn__line-2" x1="0" y1="17" x2="35" y2="17" stroke-width="4" stroke="white"></line>
+              <line class="nav-btn__line" id="nav-btn__line-3" x1="0" y1="30" x2="35" y2="30" stroke-width="4" stroke="white"></line>
             </svg>
           </button>
+          <div class="hamburger-nav">
+            <ul class="hamburger-nav__list">
+              <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="works.html">Мои работы</a></li>
+              <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="blog.html">Блог</a></li>
+              <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="about.html">Обо Мне</a></li>
+              <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="index.html">Авторизация</a></li>
+            </ul>
+          </div>
         </div>
         <div class="header__center">
           <div class="author-info">
@@ -51,39 +61,38 @@
       <main class="main" id="main">
         <div class="block-title">
           <div class="triangles">
-            <div class="triangles__left works--triangle-left"></div>
-            <div class="triangles__right works--triangle-right"></div>
+            <svg class="triangles__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+              <polygon class="triangles__left works--triangles-fill" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+              <polygon class="triangles__right works--triangles-fill" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+            </svg>
           </div><img class="block-title__img" src="images/svg/works_header.svg">
           <h1 class="main-title">Мои работы</h1>
         </div>
-        <section class="slider">
-          <div class="slider__left">
-            <div class="slider__cont">
-              <h2 class="sub-title">Сайт школы онлайн<br>образования</h2>
-              <div class="slider__desc">html, Css, Javascript</div><a class="slider__main-link" href="#">Посмотреть сайт
-                <svg class="slider__main-link__svg">
-                  <use xlink:href="images/sprites/symbol/sprite.svg#link"></use>
-                </svg></a>
-            </div>
+        <section class="slider2">
+          <div class="slider2__desc">
+            <h2 class="sub-title sub-title--slider">Сайт школы онлайн образования</h2>
+            <div class="slider2__desc-text">html, Css, Javascript</div><a class="slider2__main-link" href="#">Посмотреть сайт
+              <svg class="slider2__main-link__svg">
+                <use xlink:href="images/sprites/symbol/sprite.svg#link"></use>
+              </svg></a>
           </div>
-          <div class="slider__right">
-            <div class="slider__view-sait"><img class="slider__big-img" src="images/works/work2-1.png"></div>
-            <div class="slider__btn">
-              <div class="slider__btn-left" style="background-image: url('images/works/work2-2.png');"><a class="slider__link" href="#">
-                  <svg class="slider__link__svg">
-                    <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_down"></use>
-                  </svg></a></div>
-              <div class="slider__btn-right" style="background-image: url('images/works/work2-3.png');"><a class="slider__link" href="#">
-                  <svg class="slider__link__svg">
-                    <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up"></use>
-                  </svg></a></div>
-            </div>
+          <div class="slider2__view"><img class="slider2__big-img" src="images/works/work2-1.png"></div>
+          <div class="slider2__btn">
+            <div class="slider2__btn-left" style="background-image: url('images/works/work2-2.png');"><a class="slider2__link slider2__link--left" href="#">
+                <svg class="slider2__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_down"></use>
+                </svg></a></div>
+            <div class="slider2__btn-right" style="background-image: url('images/works/work2-3.png');"><a class="slider2__link slider2__link--right" href="#">
+                <svg class="slider2__svg">
+                  <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up"></use>
+                </svg></a></div>
           </div>
         </section>
+        <div class="block-title block-title--bg-white"><img class="block-title__img" src="images/svg/about_header.svg">
+          <h2 class="main-title">Что обо мне<br>говорят</h2>
+        </div>
         <section class="reviews">
-          <div class="block-title block-title--bg-white"><img class="block-title__img" src="images/svg/about_header.svg">
-            <h2 class="main-title">Что обо мне<br>говорят</h2>
-          </div>
+          <div class="reviews__blur-bg"><img class="reviews__blur-bg-img" src="images/bg-works2.jpg"></div>
           <div class="reviews__top">
             <div class="comment">
               <div class="comment__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
@@ -111,18 +120,21 @@
             </div>
           </div>
           <div class="reviews__center">
-            <div class="feedback">
-              <h2 class="sub-title sub-titel--margin">Связаться со мной</h2>
-              <form class="feedback-form" method="post" action="mail.php">
-                <div class="feedback-form__block">
-                  <input class="feedback-form__input" type="text" name="name" placeholder="Имя">
-                  <input class="feedback-form__input" type="text" name="email" placeholder="Email">
-                  <textarea class="feedback-form__textarea" name="text" placeholder="Ваше сообщение"></textarea>
+            <div class="reviews__content">
+              <div class="reviews__blur"></div>
+              <div class="feedback">
+                <h2 class="sub-title sub-titel--margin">Связаться со мной</h2>
+                <form class="feedback-form" method="post" action="mail.php">
+                  <div class="feedback-form__block">
+                    <input class="feedback-form__input" type="text" name="name" placeholder="Имя">
+                    <input class="feedback-form__input" type="text" name="email" placeholder="Email">
+                    <textarea class="feedback-form__textarea" name="text" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </form>
+                <div class="feedback-btn">
+                  <input class="feedback-btn__input" type="submit" name="submit" value="Отправить">
+                  <input class="feedback-btn__input" type="button" name="email" value="Очистить">
                 </div>
-              </form>
-              <div class="feedback-btn">
-                <input class="feedback-btn__input" type="submit" name="submit" value="Отправить">
-                <input class="feedback-btn__input" type="button" name="email" value="Очистить">
               </div>
             </div>
           </div>
@@ -159,20 +171,6 @@
       <div class="footer__bottom">
         <div class="footer__text-left">Я веб-разработчик из Таррагоны и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
         <div class="footer__text-right">© Снига Олег | создано с любовью в LoftSchool | 2017</div>
-      </div>
-      <div class="hamburger-nav">
-        <div class="hamburger-nav__close">
-          <svg class="hamburger-nav__stick--1" width="35" height="35" viewBox="0 0 30 30">
-            <line x1="0" y1="30" x2="30" y2="0" stroke-width="5" stroke="white"></line>
-            <line x1="30" y1="30" x2="0" y2="0" stroke-width="5" stroke="white"></line>
-          </svg>
-        </div>
-        <ul class="hamburger-nav__list">
-          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="works.html">Мои работы</a></li>
-          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="blog.html">Блог</a></li>
-          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="about.html">Обо Мне</a></li>
-          <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="index.html">Авторизация</a></li>
-        </ul>
       </div>
     </footer>
   </body>

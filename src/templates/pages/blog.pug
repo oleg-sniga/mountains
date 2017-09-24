@@ -9,8 +9,9 @@ block content
         main.main#main
             section.blog
                 .triangles
-                    .triangles__left
-                    .triangles__right
+                    svg.triangles__svg(xmlns="http://www.w3.org/2000/svg",viewbox="0 0 1000 85",preserveaspectratio="none")
+                            polygon.triangles__left(points="0,0 0,86 500.8,86 500.8,75.5")
+                            polygon.triangles__right(points="1000,0 1000,86 500,86 500,75.5")
                 .blog__left
                     aside.blog-nav
                         ul.blog-nav__list
@@ -22,6 +23,7 @@ block content
                                 a.blog-nav__link(href="#") Самый необходимый набор Gulp плагинов
                             li.blog-nav__items
                                 a.blog-nav__link(href="#") Почему я выбрал Jade
+                        button.blog-nav__btn
                 .blog__right
                     article.article
                         h2.sub-title.sub-title--article Самое важное в SASS

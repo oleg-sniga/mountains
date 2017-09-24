@@ -11,13 +11,19 @@
     margin-top: rem(40px);
     &::after {
         content: '';
-        height: rem(240px);
+        height: rem(120px);
         width: 100%;
         display: block;
     }
+    @include tablets {
+        &::after {
+            content: '';
+            height: rem(240px);
+        }
+    }
 }
 .blog__left {
-    width: 25%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -25,15 +31,28 @@
     padding: rem(20px);
     padding-right: rem(5px);
     padding-left: rem(5px);
-    overflow: hidden;
+    transition: all 1s ease;
+    // outline: 1px solid black;
+
+    &__nav {
+        position: relative;
+    }
 
     @include tablets {
+        background: $mintBlue;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
         width: 0;
         padding: 0;
+        margin: 0;
+        z-index: 90;
     }
 }
 .blog__right {
-    width: 70%;
+    width: 60%;
     padding: rem(25px);
     padding-right: 14%;
     // margin-left: rem(80px);
@@ -46,6 +65,24 @@
     }
 }
 
+
+.blog__left--active {
+    width: 50%;
+}
+.blog-nav__btn {
+    display: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    background: $mintBlue;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    @include tablets {
+        display: block;
+    }
+}
 .blog-nav {
 
     &__list {
@@ -60,7 +97,7 @@
         font-family: 'Roboto';
         font-size: rem(16px);
         font-weight: bold;
-        color:$textColor;
+        color: $textColor;
         transition: color .3s ease;
         padding: rem(12px);
         padding-right: rem(15px);
@@ -69,10 +106,21 @@
         &:hover, &--active {
             color: $mintBlue;
             border-right: rem(4px) solid $mintBlue;
+            @include tablets {
+                color: #fff;
+                border-color: none;
+            }
+        }
+
+        @include tablets {
+            color: rgba(255,255,255, .7);
         }
     }
     &__link--active {
         color: $mintBlue;
+        @include tablets {
+            color: #fff;
+        }
     }
 }
 

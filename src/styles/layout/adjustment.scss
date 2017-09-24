@@ -98,71 +98,30 @@ html {
   display: flex;
   flex-direction: row;
   @include tablets {
-    margin-top: rem(-70px);
+    height: rem(100px);
+    margin-top: rem(-100px);
   }
   @include mphones {
-    margin-top: rem(-30px);
+    height: rem(80px);
+    margin-top: rem(-80px);
   }
 
   &__left, &__right {
-    // outline: 1px solid red;
-    height: rem(150px);
-    width: 50%;
-
-    @include tablets {
-      height: rem(70px);
-    }
-    @include mphones {
-      height: rem(30px);
-    }
-  }
-
-  &__left {
-    background-image: linear-gradient(to bottom left, transparent 50%, #fff 51%);
-  }
-  &__right {
-    background-image: linear-gradient(to bottom right, transparent 50%, #fff 51%);
+    fill: #fff;
   }
 
   &__svg {
-    fill: #fff;
     width: 100%;
   }
 }
 
-.hamburger-nav {
-  display: none;
-  background: rgba(0, 191, 165, .85);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-.hamburger-nav__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hamburger-nav__items {
-  margin-top: rem(80px);
-}
-.hamburger-nav__link {
-  font-family: 'Bernier';
-  font-size: rem(63px);
-  margin-top: rem(80px);
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
 .hamburger-nav__close {
   width: rem(30px);
   height: rem(30px);
   position: absolute;
   top: rem(30px);
   right: rem(35px);
+  cursor: pointer;
 }
 .hamburger-nav__stick {
   display: block;

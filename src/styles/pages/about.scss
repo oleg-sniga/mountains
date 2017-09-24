@@ -32,31 +32,32 @@
     @include screen1280 {
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
     }
     @include tablets {
-        padding: 20px 20%;
+        padding: rem(20px) 20%;
     }
     @include phones {
-        padding: 20px 10%;
+        padding: rem(20px) 10%;
     }
     @include mphones {
-        padding: 20px 0;
+        padding: rem(20px) 0;
     }
 }
-.about-triangle__left {
-    background-image: linear-gradient(to bottom left, transparent 50%, $Grey 51%);
+.about--triangles-left {
+    fill: $Grey;
   }
-.about-triangle__right {
-    background-image: linear-gradient(to bottom right, transparent 50%, #eeebdf 51%);
+.about--triangles-right {
+    fill: #eeebdf;
     @include tablets {
-        background-image: linear-gradient(to bottom right, transparent 50%, $Grey 51%);
+        fill: $Grey;
     }
 }
 .about__title,
 .about__info {
     width: 50%;
     @include screen1280 {
-        width: 80%;
+        width: 85%;
     }
     @include tablets {
         width: 100%;
