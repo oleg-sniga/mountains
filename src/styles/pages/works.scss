@@ -1,0 +1,280 @@
+
+.reviews {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        height: rem(140px);
+        width: 100%;
+        display: block;
+        @include tablets {
+            height: rem(240px);
+        }
+    }
+    @include tablets {
+        padding-top: rem(40px);
+    }
+}
+.reviews__blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+    min-width: 1300px;
+
+    &-img {
+        display: block;
+        width: 100%;
+    }
+}
+.works--triangles-fill {
+    fill: $Beige;
+}
+
+.block-title {
+    background: $Beige;
+    width: 100%;
+    height: rem(185px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include tablets {
+        height: rem(135px);
+    }
+    @include mphones {
+        height: rem(95px);
+    }
+  
+    &__img {
+      opacity: .07;
+      display: block;
+      height: 90%;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+.block-title--bg-white {
+    background: none;
+    margin: rem(45px) auto rem(45px);
+    padding-top: rem(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.main--dashes {
+    &::before, &::after {
+        margin-top: rem(-70px);
+      }
+}
+
+.reviews__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: rem(70px);
+    padding: 0 rem(25px);
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 rem(10px);
+    }
+}
+.comment {
+    width: rem(360px);
+    font-family: 'Roboto';
+    font-size: rem(16px);
+    font-weight: 300;
+    line-height: rem(24px);
+    margin-right: rem(30px);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include phones {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+        @include phones {
+            margin-top: rem(30px);
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        font-family: 'Fontawesome';
+        font-size: rem(36px);
+        margin-top: rem(10px);
+        margin-bottom: rem(30px);
+        opacity: .2;
+        @include phones {
+            text-align: center;
+            margin-bottom: rem(20px);
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(20px);
+        flex-grow: 1;
+        color: $textColor;
+    }
+    &__pic {
+        border-radius: 50%;
+        width: rem(80px);
+        height: rem(80px);
+        overflow: hidden;
+        position: relative;
+    }
+    &__avatar {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    &__author {
+        margin-left: rem(20px);
+        color: $mintBlue;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__name {
+        font-weight: bold;
+    }
+}
+
+.reviews__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(70px);
+    @include mphones {
+        padding: 0 rem(10px);
+    }
+}
+
+.reviews__content {
+    position: relative;
+    width: rem(380px);
+    height: rem(435px);
+    border-radius: rem(4px);
+    overflow: hidden;
+    // outline: 1px solid red;
+}
+.reviews__blur {
+    background: url('../images/bg-works2.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: -735px -521px;
+    filter: blur(10px);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.feedback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.sub-titel--margin {
+    margin:rem(30px) auto;
+    width: 100%;
+}
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-form__block {
+    width: 100%;
+    padding: 0 rem(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-form__input {
+    width: 100%;
+    border-radius: rem(4px);
+    padding: rem(12px) rem(22px);
+    margin-bottom: rem(20px);
+    border: 1px solid transparent;
+}
+.feedback-form__textarea {
+    width: 100%;
+    height: rem(140px);
+    border-radius: rem(4px);
+    padding: rem(10px) rem(20px);
+    margin-bottom: rem(20px);
+    border: 1px solid transparent;
+    resize: none;
+}
+.feedback-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &__input {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 500;
+        padding: rem(15px);
+        color: #fff;
+        background: rgba(38, 187, 170, .5);
+        border: none;
+        border-right:rem(2px) solid rgba(111, 209, 198, .5);
+        cursor: pointer;
+        flex-grow: 1;
+        transition: all .3s ease;
+        &:last-child {
+            border-right: none;
+        }
+        &:hover{
+            background: rgba(38, 140, 139, .5);
+        }
+    }
+}
+
+.reviews__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: rem(80px);
+}
+.arrow-up__link {
+    display: inline-block;
+    opacity: .7;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.arrow-up__svg {
+    width: rem(26px);
+    height: rem(16px);
+    fill: #fff;
+    display: block;
+}

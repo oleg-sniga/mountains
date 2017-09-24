@@ -1,8 +1,18 @@
-.container
-    ul#slides
-        li.slide.showing
-        li.slide
-        li.slide
-    .buttons
-        button.controls#prev &lt;
-        button.controls#next &gt;
+section.slider2
+    .slider2__desc
+        h2.sub-title.sub-title--slider Сайт школы онлайн образования
+        .slider2__desc-text html, Css, Javascript
+        a.slider2__main-link(href="#") Посмотреть сайт
+            svg.slider2__main-link__svg
+                use(xlink:href="images/sprites/symbol/sprite.svg#link")
+    .slider2__view
+        img.slider2__big-img(src="images/works/work2-1.png")
+    .slider2__btn
+        .slider2__btn-left(style="background-image: url('images/works/work2-2.png');")
+            a.slider2__link.slider2__link--left(href="#")
+                svg.slider2__svg
+                    use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_down")
+        .slider2__btn-right(style="background-image: url('images/works/work2-3.png');")
+            a.slider2__link.slider2__link--right(href="#")
+                svg.slider2__svg
+                    use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up")

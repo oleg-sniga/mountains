@@ -1,0 +1,55 @@
+@mixin gagalin() {
+	font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+}
+
+@mixin ubuntu($style: light) {
+	font-family: 'Ubuntu', Helvetica, sans-serif;
+
+	@if $style == light {
+		font-weight: 300;
+	}
+
+	@if $style == medium {
+		font-weight: 500;
+	}
+
+	@if $style == bold {
+		font-weight: bold;
+	}
+}
+
+@mixin lifehack() {
+	font-family: 'Lifehack-Medium';
+}
+
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
+
+@mixin screen1280 {
+	@media screen and (max-width: $screen1280) {
+	  @content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+	  @content;
+	}
+  }
+  
+@mixin phones {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+@mixin mphones {
+	@media screen and (max-width: $mphones) {
+		@content;
+	}
+}
+@mixin minHeight {
+	@media screen and (max-height: $minHeight) and (min-width: 600px){
+		@content;
+	}
+}
