@@ -26,5 +26,9 @@ if (document.querySelector('.reviews__content')) {
 }
 
 if (document.querySelector('.parallax')) {
+  if ($(window).width() >= '769') {
     parallax();
+  } else {
+    $('.parallax__layer').remove();
+  }
 }

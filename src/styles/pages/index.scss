@@ -80,6 +80,8 @@
 }
 
 .parallax {
+  background: url('../images/bg-index.jpg') center no-repeat;
+  background-size: cover;
     position: relative;
     overflow: hidden;
 

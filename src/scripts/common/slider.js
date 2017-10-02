@@ -1,104 +1,51 @@
 function slider(){
-  const slidesLeft = $('.slider__list-left');
-  const slidesRight = $('.slider__list-right');
-  const next = $('#slider__btn--next');
-  const previous = $('#slider__btn--prev');
-  const controlsLeft = $('.slider__items-left');
-  const controlsRight = $('.slider__items-right');
+  const slider = $('.slider__list');
+  const nav = $('.slider-nav');
 
-  var sliderL = $('.slider__list-left');
-  var itemsL = sliderL.find('.slider__items-left');
-  var slideActiveL = itemsL.filter('.slider--active-left');
-  var leftItemN = slideActiveL.next();
-  var leftItemP = slideActiveL.prev();
-  // var reqIndex = reqItemN.index();
-  console.log(slideActiveL.index());
-  console.log(leftItemN.index());
-  console.log(leftItemP.index());
-  // console.log(reqIndex);
-
-  var sliderR = $('.slider__list-right');
-  var itemsR = sliderR.find('.slider__items-right');
-  var slideActiveR = itemsR.filter('.slider--active-right');
-  var rightItemN = slideActiveL.next();
-  var rightItemP = slideActiveL.prev();
-  console.log(rightItemN.index());
-  console.log(rightItemP.index());
-
-  function percent(n) {
-    // var pos = n*-100;
-    var position = (-n * 100) + '%';
-    return position;
-  }
-  var posLeft = percent(slideActiveL.index());
-  controlsLeft.css({'top':posLeft});
-
-  var posRight = percent(slideActiveR.index());
-  controlsRight.css({'top':posRight});
-
-  next.on('click',function(){
-    posLeft = percent(leftItemN.index());
-    posRight = percent(rightItemP.index());
-    controlsLeft.css({'top':posLeft});
-    controlsRight.css({'top':posRight});
-    console.log(posLeft)
-    console.log(posRight)
-  });
-  previous.on('click',function(){
-    posLeft = percent(leftItemP.index());
-    posRight = percent(rightItemN.index());
-    controlsLeft.css({'top':posLeft});
-    controlsRight.css({'top':posRight});
-    console.log(posLeft)
-    console.log(posRight)
+  $('.slider-nav__btn').on('click', function(event) {
+    event.preventDefault;
   });
 
-  // posRight = percent(currentSlideRight);
-  // controlsLeft.css({'top':posLeft});
-  // controlsRight.css({'top':posRight});
-  // var reqIndex = controlsLeft.index();
-  // console.log(reqIndex);
+  $('.slider__btn').on('click',function(){
+
+      var items = slider.find('.slider__items');
+      var slideActive = items.filter('.slider--active');
+      var reqItemN = slideActive.next();
+      var reqItemP = slideActive.prev();
+
+
+      var navButtons = nav.find('.slider-nav__items');
+      var navActive = navButtons.filter('.nav--active');
+      var navItemN = navActive.next();
+      var navItemP = navActive.prev();
+
+      if ($(this).hasClass('slider__btn--next')){
+        if (reqItemN.length){
+          var reqIndex = reqItemN.index();
+          posElem = -reqIndex * 100;
+
+          $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+            slideActive.removeClass('slider--active');
+            reqItemN.addClass('slider--active');
+
+            navActive.removeClass('nav--active');
+            navItemN.addClass('nav--active');
+          });
+        }
+      } else {
+        if (reqItemP.length){
+          var reqIndex = reqItemP.index();
+          posElem = -reqIndex * 100;
+
+          $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+            slideActive.removeClass('slider--active');
+            reqItemP.addClass('slider--active');
+
+            navActive.removeClass('nav--active');
+            navItemP.addClass('nav--active');
+          });
+        }
+      }
+  });
 }
-
-function nextSlide(){
-
-}
-
-
-// осуществляет переход к слайду номер n (начиная с 0)
-// function goToSlide(){
-//
-//
-// // console.log(controlsLeft.length);
-// // currentSlide = (n+slides.length)%slides.length; // остаток от деления
-//   // slides[currentSlide].className = 'slide';
-//   // currentSlide = (n+slides.length)%slides.length; // остаток от деления
-//   // slides[currentSlide].className = 'slide showing';
-// }
-
-// // навешивает обработчики событий на элементы next и prev
-// function setupListners(){
-//   next.onclick = function(){
-//     goToSlide(currentSlide+1);
-//   };
-//   previous.onclick = function(){
-//     goToSlide(currentSlide-1);
-//   };
-// }
-//
-// // показывает кнопки для навигации
-// function showButtons(){
-//   for(var i=0; i<controls.length; i++){
-//     controls[i].style.display = 'inline-block';
-//   }
-// }
-
-// инициализация слайдера
-// function sliderInit(){
-//   if (slides.length !== 0){ // если на странице есть нужный html код
-//     setupListners();
-//     showButtons();
-//   }
-// }
-
 module.exports = slider;
