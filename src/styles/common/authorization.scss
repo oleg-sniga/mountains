@@ -20,7 +20,7 @@
     flex-grow: 1;
 }
 .authorization__column {
-    font-family: 'Roboto';
+    font-family: 'RobotoRegular';
     font-size: rem(16px);
     color: $textColor;
     display: flex;
@@ -34,17 +34,63 @@
 }
 .authorization__label {
     width: 100%;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: rem(4px);
-    overflow: hidden;
+
+    &--focus .authorization__input{
+      border: 1px solid $mintBlue;
+    }
+    &--focus .authorization__svg{
+      fill: $mintBlue;
+    }
+    &--error .authorization__input{
+      border: 1px solid #e44845;
+    }
+    &--error .authorization__svg{
+      fill: $Red;
+    }
+}
+.authorization__label--check {
+  width: auto;
+  margin-right: rem(30px);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.authorization__msg {
+  background: $Red;
+  color: #fff;
+  padding: rem(12px) rem(20px);
+  position: absolute;
+  top: 100%;
+  margin-top: rem(15px);
+  z-index: 95;
+  border-radius: rem(4px);
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+
+    border-left: rem(10px) solid transparent;
+    border-right: rem(10px) solid transparent;
+    border-bottom: rem(10px) solid $Red;
+
+    position: absolute;
+    top: rem(-10px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .authorization__input {
     border: 1px solid transparent;
     flex-grow: 1;
     padding: rem(14px) rem(16px);
+    border-radius: 0 rem(4px) rem(4px) 0;
+    height: rem(46px);
 }
 .authorization__title {
     margin-left: rem(10px);
@@ -52,25 +98,39 @@
 
 .authorization__img {
     background: #f0efe9;
-    padding: rem(13px) rem(15px);
+    position: relative;
+    height: rem(46px);
+    width: rem(46px);
+    border-radius: rem(4px) 0 0 rem(4px);
+    overflow: hidden;
 }
 .authorization__svg {
-    fill: #c4cbcd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: rem(18px);
+  height: rem(18px);
+  fill: #c4cbcd;
 }
 .authorization__checkbox-title {
     margin-bottom: rem(7px);
     font-weight: bold;
 }
 .authorization__checkbox {
-    display: none;
 
+    &:checked + .authorization__fake-check {
+        background: $mintBlue;
+        border-color: transparent;
+    }
     &:checked + .authorization__fake-check .authorization__fake-check__svg {
         display: block;
     }
 }
 .authorization__fake-check {
-    background: $mintBlue;
+    background: #fff;
     cursor: pointer;
+    border: rem(2px) solid #cdcdcd;
     border-radius: rem(4px);
     width: rem(20px);
     height: rem(20px);
@@ -90,8 +150,6 @@
 
 //Капча радио кнопок
 .authorization__radio {
-    display: none;
-
     &:checked + .authorization__fake-radio {
         &::after {
             display: block;
@@ -130,7 +188,7 @@
     flex-grow: 1;
     padding: rem(13px) rem(10px);
     background: rgba(0,191,165, .8);
-    font-family: 'Roboto';
+    font-family: 'RobotoRegular';
     font-size: rem(16px);
     color: #fff;
     cursor: pointer;

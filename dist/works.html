@@ -7,19 +7,27 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="/images/fav_mount.png">
     <link rel="stylesheet" href="/styles/main.min.css">
     <script src="/js/bundle.js" defer></script>
   </head>
   <body>
+    <div class="preloader">
+      <div class="preloader__cont">
+        <div class="preloader__circle preloader__circle-1"></div>
+        <div class="preloader__circle preloader__circle-2"></div>
+        <div class="preloader__circle preloader__circle-3"></div><span class="preloader__percent">0%</span>
+      </div>
+    </div>
     <div class="wrapper">
       <header class="header" id="header">
         <div class="header__top">
           <ul class="socials">
-            <li class="socials__items"><a class="socials__link" href="https://vk.com/id18822110">
+            <li class="socials__items"><a class="socials__link" href="https://vk.com/id18822110" target="_blank">
                 <svg class="socials__svg header--social-svg">
                   <use xlink:href="images/sprites/symbol/sprite.svg#vk"></use>
                 </svg></a></li>
-            <li class="socials__items"><a class="socials__link" href="https://github.com/mast777">
+            <li class="socials__items"><a class="socials__link" href="https://github.com/mast777" target="_blank">
                 <svg class="socials__svg header--social-svg">
                   <use xlink:href="images/sprites/symbol/sprite.svg#github"></use>
                 </svg></a></li>
@@ -28,13 +36,7 @@
                   <use xlink:href="images/sprites/symbol/sprite.svg#in"></use>
                 </svg></a></li>
           </ul>
-          <button class="nav-btn">
-            <svg class="nav-btn__svg" width="35" height="35" viewBox="0 0 35 35" preserveaspectratio="none">
-              <line class="nav-btn__line" id="nav-btn__line-1" x1="0" y1="3" x2="35" y2="3" stroke-width="4" stroke="white"></line>
-              <line class="nav-btn__line" id="nav-btn__line-2" x1="0" y1="17" x2="35" y2="17" stroke-width="4" stroke="white"></line>
-              <line class="nav-btn__line" id="nav-btn__line-3" x1="0" y1="30" x2="35" y2="30" stroke-width="4" stroke="white"></line>
-            </svg>
-          </button>
+          <button class="nav-btn"><span class="nav-btn__line nav-btn__line-01"></span><span class="nav-btn__line nav-btn__line-02"></span><span class="nav-btn__line nav-btn__line-03"></span></button>
           <div class="hamburger-nav">
             <ul class="hamburger-nav__list">
               <li class="hamburger-nav__items"><a class="hamburger-nav__link" href="works.html">Мои работы</a></li>
@@ -68,24 +70,40 @@
           </div><img class="block-title__img" src="images/svg/works_header.svg">
           <h1 class="main-title">Мои работы</h1>
         </div>
-        <section class="slider2">
-          <div class="slider2__desc">
+        <section class="slider">
+          <div class="slider__desc">
             <h2 class="sub-title sub-title--slider">Сайт школы онлайн образования</h2>
-            <div class="slider2__desc-text">html, Css, Javascript</div><a class="slider2__main-link" href="#">Посмотреть сайт
-              <svg class="slider2__main-link__svg">
+            <div class="slider__desc-text">html, Css, Javascript</div><a class="slider__main-link" href="#">Посмотреть сайт
+              <svg class="slider__main-link__svg">
                 <use xlink:href="images/sprites/symbol/sprite.svg#link"></use>
               </svg></a>
           </div>
-          <div class="slider2__view"><img class="slider2__big-img" src="images/works/work2-1.png"></div>
-          <div class="slider2__btn">
-            <div class="slider2__btn-left" style="background-image: url('images/works/work2-2.png');"><a class="slider2__link slider2__link--left" href="#">
-                <svg class="slider2__svg">
+          <div class="slider__view"><img class="slider__big-img" src="images/works/work2-1.png"></div>
+          <div class="slider__btn">
+            <div class="slider__btn-left">
+              <ul class="slider__list-left">
+                <li class="slider__items-left"><img class="slider__img" src="images/works/work2-1.png"></li>
+                <li class="slider__items-left slider--active-left"><img class="slider__img" src="images/works/work2-2.png"></li>
+                <li class="slider__items-left"><img class="slider__img" src="images/works/work2-3.png"></li>
+              </ul>
+              <button id="slider__btn--prev">
+                <svg class="slider__svg">
                   <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_down"></use>
-                </svg></a></div>
-            <div class="slider2__btn-right" style="background-image: url('images/works/work2-3.png');"><a class="slider2__link slider2__link--right" href="#">
-                <svg class="slider2__svg">
+                </svg>
+              </button>
+            </div>
+            <div class="slider__btn-right">
+              <ul class="slider__list-right">
+                <li class="slider__items-right"><img class="slider__img" src="images/works/work2-1.png"></li>
+                <li class="slider__items-right"><img class="slider__img" src="images/works/work2-2.png"></li>
+                <li class="slider__items-right slider--active-right"><img class="slider__img" src="images/works/work2-3.png"></li>
+              </ul>
+              <button id="slider__btn--next">
+                <svg class="slider__svg">
                   <use xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up"></use>
-                </svg></a></div>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
         <div class="block-title block-title--bg-white"><img class="block-title__img" src="images/svg/about_header.svg">
@@ -130,11 +148,11 @@
                     <input class="feedback-form__input" type="text" name="email" placeholder="Email">
                     <textarea class="feedback-form__textarea" name="text" placeholder="Ваше сообщение"></textarea>
                   </div>
+                  <div class="feedback-btn">
+                    <input class="feedback-btn__input" type="submit" name="submit" value="Отправить">
+                    <input class="feedback-btn__input" type="reset" name="email" value="Очистить">
+                  </div>
                 </form>
-                <div class="feedback-btn">
-                  <input class="feedback-btn__input" type="submit" name="submit" value="Отправить">
-                  <input class="feedback-btn__input" type="button" name="email" value="Очистить">
-                </div>
               </div>
             </div>
           </div>

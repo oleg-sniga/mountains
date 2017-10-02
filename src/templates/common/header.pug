@@ -2,29 +2,23 @@ header.header#header
     .header__top
         ul.socials
             li.socials__items
-                a.socials__link(href="https://vk.com/id18822110")
+                a.socials__link(href="https://vk.com/id18822110",target="_blank")
                     svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#vk")
             li.socials__items
-                a.socials__link(href="https://github.com/mast777")
+                a.socials__link(href="https://github.com/mast777",target="_blank")
                     svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#github")
             li.socials__items
                 a.socials__link(href="#")
                     svg.socials__svg.header--social-svg
                         use(xlink:href="images/sprites/symbol/sprite.svg#in")
+        //- .hamburger
         button.nav-btn
-            svg.nav-btn__svg(width="35",height="35",viewBox="0 0 35 35",preserveaspectratio="none")
-                line.nav-btn__line#nav-btn__line-1(x1="0",y1="3",x2="35",y2="3",stroke-width="4",stroke="white")
-                line.nav-btn__line#nav-btn__line-2(x1="0",y1="17",x2="35",y2="17",stroke-width="4",stroke="white")
-                line.nav-btn__line#nav-btn__line-3(x1="0",y1="30",x2="35",y2="30",stroke-width="4",stroke="white")
-            //- svg.nav-btn__svg
-            //-     use(xlink:href="images/sprites/symbol/sprite.svg#hamburger")
+            span.nav-btn__line.nav-btn__line-01
+            span.nav-btn__line.nav-btn__line-02
+            span.nav-btn__line.nav-btn__line-03
         .hamburger-nav
-            //- .hamburger-nav__close
-            //-     svg.hamburger-nav__stick--1(width="35",height="35",viewBox="0 0 30 30")
-            //-             line(x1="0",y1="30",x2="30",y2="0",stroke-width="5",stroke="white")
-            //-             line(x1="30",y1="30",x2="0",y2="0",stroke-width="5",stroke="white")
             ul.hamburger-nav__list
                 li.hamburger-nav__items
                     a.hamburger-nav__link(href="works.html") Мои работы

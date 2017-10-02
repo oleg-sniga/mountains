@@ -49,7 +49,7 @@
 	}
 }
 @mixin minHeight {
-	@media screen and (max-height: $minHeight) and (min-width: 600px){
+	@media screen and (max-height: $minHeight){
 		@content;
 	}
 }

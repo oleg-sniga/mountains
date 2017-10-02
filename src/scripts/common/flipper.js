@@ -1,10 +1,9 @@
-
 function flipperInit(){
     var Flip = $('.flipper');
 
     $('.login-btn').on('click',function(e){
         e.preventDefault;
-        
+
         if (Flip.hasClass('flipper--active')) {
             Flip.removeClass('flipper--active');
         } else {

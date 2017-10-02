@@ -16,13 +16,13 @@
     color: $textColor;
 
     h1 {
-        font-family: 'Roboto';
+        font-family: 'RobotoRegular';
         font-size: rem(28px);
         margin: rem(10px) 0 0;
     }
     p {
         margin-bottom: rem(40px);
-        font-family: 'Roboto';
+        font-family: 'RobotoRegular';
         font-size: rem(16px);
     }
 }
@@ -50,36 +50,6 @@
     transform: translate(-50%,-50%);
 }
 
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    &__items {
-        margin-left: rem(25px);
-        &:first-child {
-            margin-left: 0;
-        }
-    }
-    &__svg {
-        fill: $mintBlue;
-        width: rem(35px);
-        height: rem(25px);
-        display: block;
-    }
-
-    &__link {
-        width: rem(35px);
-        height: rem(25px); 
-        display: inline-block;
-        opacity: .5;
-        transition:all .3s ease;
-        &:hover{
-            opacity: 1;
-        }
-    }
-}
-
 
 .menu {
     width: 100%;
@@ -101,7 +71,7 @@
         }
     }
     &__link {
-        font-family: 'Roboto';
+        font-family: 'RobotoRegular';
         font-size: rem(16px);
         font-weight: 500;
         padding: rem(13px) 0;

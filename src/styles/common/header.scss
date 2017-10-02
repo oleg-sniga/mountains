@@ -34,7 +34,7 @@
 }
 .author-info {
     text-align: center;
-    font-family: 'Roboto';
+    font-family: 'RobotoRegular';
     font-size: rem(35px);
     // outline: 1px solid green;
     color: #fff;
@@ -84,23 +84,52 @@
     cursor: pointer;
     padding: 0;
     z-index: 91;
-
-    &__svg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: rem(40px);
-        height: rem(36px);
-        fill: #fff;
-        // outline: 1px solid black;
+    position: relative;
+    width: rem(38px);
+    height: rem(28px);
+    opacity: .5;
+    transition: opacity .3s ease;
+    &:hover {
+      opacity: 1;
     }
     &__line {
-        // outline: 1px solid red;
-        border-radius: 5px;
-    
+      background: #fff;
         width: 100%;
+        height: rem(4px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: rem(2px);
+        transition: all .5s ease;
+
     }
+    &__line-02 {
+      top: rem(12px);
+    }
+    &__line-03 {
+      top: rem(24px);
+    }
+
+    &--active &__line-02{
+      opacity: 0;
+    }
+    &--active &__line-01 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &--active &__line-03 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+    &--active {
+      overflow: hidden;
+    }
+}
+.hamburger {
+    position: relative;
+    outline: 1px solid black;
 }
 .hamburger-nav {
     background: rgba(0, 191, 165, .9);
@@ -125,6 +154,12 @@
 }
 .hamburger-nav__items {
     margin-top: rem(80px);
+    @include mphones {
+        margin-top: rem(60px);
+    }
+    @include minHeight {
+        margin-top: rem(20px);
+    }
 }
 
 .hamburger-nav__link {
@@ -133,6 +168,10 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+
+    @include minHeight {
+        font-size: rem(42px);
+    }
 
 &::before ,&::after {
     content: '';

@@ -2,7 +2,7 @@
     background: rgba(55, 62, 66, .85);
     height: rem(140px);
     width: 100%;
-    font-family: 'Roboto';
+    font-family: 'RobotoRegular';
     font-size: rem(16px);
     color: #fff;
     display: flex;
@@ -51,7 +51,11 @@
         }
     }
     &__link:hover {
-        text-decoration: underline;
+        color: #fff;
+        transition:all .3s;
+    }
+    &__link:hover {
+        color: $mintBlue;
     }
     @include tablets {
         margin-bottom: rem(15px);

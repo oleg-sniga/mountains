@@ -9,10 +9,16 @@ html
         meta(content="" name="keywords")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(rel="icon", href="/images/fav_mount.png")
         link(rel="stylesheet", href="/styles/main.min.css")
         script(src="/js/bundle.js" defer)
     body
+        .preloader
+            .preloader__cont
+                .preloader__circle.preloader__circle-1
+                .preloader__circle.preloader__circle-2
+                .preloader__circle.preloader__circle-3
+                span.preloader__percent 0%
         block content
-        //- include common/menu.pug
-
+        
         block footer
