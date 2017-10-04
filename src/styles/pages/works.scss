@@ -87,7 +87,7 @@
 }
 .comment {
     width: rem(360px);
-    font-family: 'Roboto';
+    font-family: 'RobotoRegular';
     font-size: rem(16px);
     font-weight: 300;
     line-height: rem(24px);
@@ -223,6 +223,10 @@
     padding: rem(12px) rem(22px);
     margin-bottom: rem(20px);
     border: 1px solid transparent;
+
+    &:focus {
+      border-color: $mintBlue;
+    }
 }
 .feedback-form__textarea {
     width: 100%;
@@ -232,6 +236,9 @@
     margin-bottom: rem(20px);
     border: 1px solid transparent;
     resize: none;
+    &:focus {
+      border-color: $mintBlue;
+    }
 }
 .feedback-btn {
     width: 100%;

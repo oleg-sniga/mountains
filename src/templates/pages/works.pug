@@ -45,14 +45,14 @@ block content
                         .reviews__blur
                         .feedback
                             h2.sub-title.sub-titel--margin Связаться со мной
-                            form.feedback-form(method="post",action="mail.php")
+                            form.feedback-form#feedback(method="post",action="mail.php")
                                 .feedback-form__block
                                     input.feedback-form__input(type="text",name="name",placeholder="Имя")
                                     input.feedback-form__input(type="text",name="email",placeholder="Email")
                                     textarea.feedback-form__textarea(name="text",placeholder="Ваше сообщение")
                                 .feedback-btn
                                     input.feedback-btn__input(type="submit",name="submit",value="Отправить")
-                                    input.feedback-btn__input(type="reset",name="email",value="Очистить")
+                                    input.feedback-btn__input(type="reset",value="Очистить")
                 .reviews__bottom
                     a.arrow-up__link(href="#header")
                         svg.arrow-up__svg

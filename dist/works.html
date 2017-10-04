@@ -19,6 +19,12 @@
         <div class="preloader__circle preloader__circle-3"></div><span class="preloader__percent">0%</span>
       </div>
     </div>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__msg">Сообщение</div>
+        <button class="modal__btn">Закрить</button>
+      </div>
+    </div>
     <div class="wrapper">
       <header class="header" id="header">
         <div class="header__top">
@@ -172,7 +178,7 @@
               <div class="reviews__blur"></div>
               <div class="feedback">
                 <h2 class="sub-title sub-titel--margin">Связаться со мной</h2>
-                <form class="feedback-form" method="post" action="mail.php">
+                <form class="feedback-form" id="feedback" method="post" action="mail.php">
                   <div class="feedback-form__block">
                     <input class="feedback-form__input" type="text" name="name" placeholder="Имя">
                     <input class="feedback-form__input" type="text" name="email" placeholder="Email">
@@ -180,7 +186,7 @@
                   </div>
                   <div class="feedback-btn">
                     <input class="feedback-btn__input" type="submit" name="submit" value="Отправить">
-                    <input class="feedback-btn__input" type="reset" name="email" value="Очистить">
+                    <input class="feedback-btn__input" type="reset" value="Очистить">
                   </div>
                 </form>
               </div>

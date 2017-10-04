@@ -219,3 +219,43 @@ html {
   }
 
 }
+
+.modal {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  &__content {
+    background: #fff;
+    padding: rem(20px);
+    width: rem(300px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: rem(4px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__msg {
+    text-align: center;
+  }
+
+  &__btn {
+    background: $mintBlue;
+    padding: rem(10px) rem(20px);
+    margin-top: rem(20px);
+    border: none;
+    border-radius: rem(4px);
+    font-family: 'RobotoRegular';
+    color: #fff;
+    cursor: pointer;
+  }
+}
