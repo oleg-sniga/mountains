@@ -1,0 +1,202 @@
+.authorization {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: rem(4px);
+    overflow: hidden;
+}
+
+.sub-title--authorization {
+    margin: rem(30px) auto;
+}
+.authorization__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.authorization__bg {
+    background:rgba(255,255,255, .8);
+    flex-grow: 1;
+}
+.authorization__column {
+    font-family: 'RobotoRegular';
+    font-size: rem(16px);
+    color: $textColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 rem(20px) rem(20px) rem(20px);
+
+    &:last-child {
+        margin: 0;
+    }
+}
+.authorization__label {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &--focus .authorization__input{
+      border: 1px solid $mintBlue;
+    }
+    &--focus .authorization__svg{
+      fill: $mintBlue;
+    }
+    &--error .authorization__input{
+      border: 1px solid #e44845;
+    }
+    &--error .authorization__svg{
+      fill: $Red;
+    }
+}
+.authorization__label--check {
+  width: auto;
+  margin-right: rem(30px);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.authorization__msg {
+  background: $Red;
+  color: #fff;
+  padding: rem(12px) rem(20px);
+  position: absolute;
+  top: 100%;
+  margin-top: rem(15px);
+  z-index: 95;
+  border-radius: rem(4px);
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+
+    border-left: rem(10px) solid transparent;
+    border-right: rem(10px) solid transparent;
+    border-bottom: rem(10px) solid $Red;
+
+    position: absolute;
+    top: rem(-10px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.authorization__input {
+    border: 1px solid transparent;
+    flex-grow: 1;
+    padding: rem(14px) rem(16px);
+    border-radius: 0 rem(4px) rem(4px) 0;
+    height: rem(46px);
+}
+.authorization__title {
+    margin-left: rem(10px);
+}
+
+.authorization__img {
+    background: #f0efe9;
+    position: relative;
+    height: rem(46px);
+    width: rem(46px);
+    border-radius: rem(4px) 0 0 rem(4px);
+    overflow: hidden;
+}
+.authorization__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: rem(18px);
+  height: rem(18px);
+  fill: #c4cbcd;
+}
+.authorization__checkbox-title {
+    margin-bottom: rem(7px);
+    font-weight: bold;
+}
+.authorization__checkbox {
+
+    &:checked + .authorization__fake-check {
+        background: $mintBlue;
+        border-color: transparent;
+    }
+    &:checked + .authorization__fake-check .authorization__fake-check__svg {
+        display: block;
+    }
+}
+.authorization__fake-check {
+    background: #fff;
+    cursor: pointer;
+    border: rem(2px) solid #cdcdcd;
+    border-radius: rem(4px);
+    width: rem(20px);
+    height: rem(20px);
+    position: relative;
+
+    &__svg {
+        display: none;
+        fill: #fff;
+        width: rem(12px);
+        height: rem(12px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+//Капча радио кнопок
+.authorization__radio {
+    &:checked + .authorization__fake-radio {
+        &::after {
+            display: block;
+        }
+    }
+}
+.authorization__fake-radio {
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: rem(2px) solid #cdcdcd;
+    width: rem(20px);
+    height: rem(20px);
+    position: relative;
+
+    &::after {
+        content: '';
+        display: none;
+        background: $mintBlue;
+        width: rem(8px);
+        height: rem(8px);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.authorization__column--radio {
+    margin-bottom: rem(40px);
+}
+
+.authorization__btn {
+    width: 50%;
+    border: none;
+    flex-grow: 1;
+    padding: rem(13px) rem(10px);
+    background: rgba(0,191,165, .8);
+    font-family: 'RobotoRegular';
+    font-size: rem(16px);
+    color: #fff;
+    cursor: pointer;
+
+    &:first-child {
+        border-right: rem(2px) solid #6fd1c6;
+    }
+    &:hover {
+        background: rgba(0,150,136, .8);
+    }
+}

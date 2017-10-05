@@ -1,40 +1,51 @@
-const slides = document.querySelectorAll('#slides .slide');
-const next = document.getElementById('next');
-const previous = document.getElementById('prev');
-const controls = document.querySelectorAll('.controls');
+function slider(){
+  const slider = $('.slider__list');
+  const nav = $('.slider-nav');
 
-let currentSlide = 0;
+  $('.slider-nav__btn').on('click', function(event) {
+    event.preventDefault;
+  });
 
-// осуществляет переход к слайду номер n (начиная с 0)
-function goToSlide(n){
-  slides[currentSlide].className = 'slide';
-  currentSlide = (n+slides.length)%slides.length; // остаток от деления
-  slides[currentSlide].className = 'slide showing';
+  $('.slider__btn').on('click',function(){
+
+      var items = slider.find('.slider__items');
+      var slideActive = items.filter('.slider--active');
+      var reqItemN = slideActive.next();
+      var reqItemP = slideActive.prev();
+
+
+      var navButtons = nav.find('.slider-nav__items');
+      var navActive = navButtons.filter('.nav--active');
+      var navItemN = navActive.next();
+      var navItemP = navActive.prev();
+
+      if ($(this).hasClass('slider__btn--next')){
+        if (reqItemN.length){
+          var reqIndex = reqItemN.index();
+          posElem = -reqIndex * 100;
+
+          $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+            slideActive.removeClass('slider--active');
+            reqItemN.addClass('slider--active');
+
+            navActive.removeClass('nav--active');
+            navItemN.addClass('nav--active');
+          });
+        }
+      } else {
+        if (reqItemP.length){
+          var reqIndex = reqItemP.index();
+          posElem = -reqIndex * 100;
+
+          $('.slider__list').animate({"left": posElem+"%"},1000,function(){
+            slideActive.removeClass('slider--active');
+            reqItemP.addClass('slider--active');
+
+            navActive.removeClass('nav--active');
+            navItemP.addClass('nav--active');
+          });
+        }
+      }
+  });
 }
-
-// навешивает обработчики событий на элементы next и prev
-function setupListners(){
-  next.onclick = function(){
-    goToSlide(currentSlide+1);
-  };   
-  previous.onclick = function(){
-    goToSlide(currentSlide-1);
-  };
-}
-
-// показывает кнопки для навигации
-function showButtons(){
-  for(var i=0; i<controls.length; i++){
-    controls[i].style.display = 'inline-block';
-  }  
-}
-
-// инициализация слайдера
-function sliderInit(){
-  if (slides.length !== 0){ // если на странице есть нужный html код 
-    setupListners();
-    showButtons();
-  }
-}
-
-module.exports = sliderInit;
+module.exports = slider;

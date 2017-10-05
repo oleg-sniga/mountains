@@ -1,8 +1,23 @@
-body {
-    margin: 10px;
-    background: #ccc;
-}
+@import 'common/normalize.scss';
 
-@import 'common/menu.scss';
-@import 'common/tech.scss';
-@import 'common/slider.scss';
+//layout
+@import 'layout/variables.scss';
+@import 'layout/fonts.scss';
+@import 'layout/mixin.scss';
+@import 'layout/base.scss';
+@import 'layout/adjustment.scss';
+
+//pages
+@import 'pages/index.scss';
+@import 'pages/works.scss';
+@import 'pages/about.scss';
+@import 'pages/blog.scss';
+
+//common
+@import 'common/welkome.scss';
+@import 'common/header.scss';
+@import 'common/authorization.scss';
+// @import 'common/slider.scss';
+@import 'common/slider3.scss';
+@import 'common/skills.scss';
+@import 'common/footer.scss';
