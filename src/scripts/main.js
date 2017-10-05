@@ -4,6 +4,7 @@ const $ = require('jquery');// если будет нужен
 const doc = document;
 
 // const modal = require('./common/modal');
+const softScroll = require('./common/scroll-soft');
 const slider = require('./common/slider');
 const hamburger = require('./common/hamburger-menu');
 const blur = require('./common/blur');
@@ -15,6 +16,7 @@ const flipper = require('./common/flipper');
 const contact = require('./common/contact-form');
 const skills = require('./common/skills');
 
+softScroll();
 slider();
 hamburger();
 preload();
