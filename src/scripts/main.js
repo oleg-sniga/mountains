@@ -1,5 +1,4 @@
 const $ = require('jquery');// если будет нужен
-// const $ = require('./jquery/jquery.min.js');// если будет нужен
 
 const doc = document;
 
@@ -15,18 +14,37 @@ const blogmenu = require('./common/blog-menu');
 const flipper = require('./common/flipper');
 const contact = require('./common/contact-form');
 const skills = require('./common/skills');
+const adminTab = require('./common/admin-tab');
+// const googlMap = require('./common/map');
 
 softScroll();
 slider();
 hamburger();
-preload();
 authorization();
 blogmenu();
 flipper();
 contact();
+adminTab();
+
+// if (doc.querySelector('.google-map')){
+//   googlMap();
+// }
+function initMap(){
+  var elem = document.getElementById('map');
+  var options = {
+      zoom: 5,
+      center: { lat: 41.1257836, lng: 1.1685435}
+  };
+
+  var myMap = new google.maps.Map(elem, options);
+}
+
 
 if (doc.querySelector('.skills')){
   skills();
+}
+if (doc.querySelector('.preloader')){
+  preload();
 }
 
 if (doc.querySelector('.reviews__content')) {

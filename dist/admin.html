@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Админка</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="/images/fav_mount.png">
+    <link rel="stylesheet" href="/styles/main.min.css">
+    <script src="/js/bundle.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="ad-header">
+        <h1 class="ad-header__title">Панель администратора</h1><a class="ad-header__link" href="/">Вернуться на сайт</a>
+      </div>
+      <div class="ad-content">
+        <ul class="ad-controls">
+          <li class="ad-controls__items"><a class="ad-controls__link ad-controls__link--active" href="#tab-1">Tab 1</a></li>
+          <li class="ad-controls__items"><a class="ad-controls__link" href="#tab-2">Tab 2</a></li>
+          <li class="ad-controls__items"><a class="ad-controls__link" href="#tab-3">Tab 3</a></li>
+          <li class="ad-controls__items"><a class="ad-controls__link" href="#tab-4">Tab 4</a></li>
+        </ul>
+        <ul class="ad-change">
+          <li class="ad-change__items" id="tab-1">
+            <div class="ad-change__content">
+              <h2 class="ad-change__title">Страница «Обо мне»</h2>
+              <form class="ad-form" id="form-skills" method="post">
+                <ul class="ad-skills">
+                  <li class="ad-skills__items">
+                    <h3 class="ad-skills__title">Frontend</h3>
+                    <div class="ad-skills__content">
+                      <label class="ad-skills__label" for="skill-html"><span class="ad-skills__span">Html</span>
+                        <input class="ad-skills__input" id="skill-html" type="text" name="html">
+                      </label>
+                      <label class="ad-skills__label" for="skill-css"><span class="ad-skills__span">CSS</span>
+                        <input class="ad-skills__input" id="skill-css" type="text" name="css">
+                      </label>
+                      <label class="ad-skills__label" for="skill-js"><span class="ad-skills__span">JavaScript</span>
+                        <input class="ad-skills__input" id="skill-js" type="text" name="js">
+                      </label>
+                    </div>
+                  </li>
+                  <li class="ad-skills__items">
+                    <h3 class="ad-skills__title">Backend</h3>
+                    <div class="ad-skills__content">
+                      <label class="ad-skills__label" for="skill-php"><span class="ad-skills__span">PHP</span>
+                        <input class="ad-skills__input" id="skill-php" type="text" name="php">
+                      </label>
+                      <label class="ad-skills__label" for="skill-mysql"><span class="ad-skills__span">mySQL</span>
+                        <input class="ad-skills__input" id="skill-mysql" type="text" name="mysql">
+                      </label>
+                      <label class="ad-skills__label" for="skill-node"><span class="ad-skills__span">Node.js</span>
+                        <input class="ad-skills__input" id="skill-node" type="text" name="node">
+                      </label>
+                      <label class="ad-skills__label" for="skill-mongo"><span class="ad-skills__span">Mongo.db</span>
+                        <input class="ad-skills__input" id="skill-mongo" type="text" name="mongo">
+                      </label>
+                    </div>
+                  </li>
+                  <li class="ad-skills__items">
+                    <h3 class="ad-skills__title">Workflow</h3>
+                    <div class="ad-skills__content">
+                      <label class="ad-skills__label" for="skill-git"><span class="ad-skills__span">Git</span>
+                        <input class="ad-skills__input" id="skill-git" type="text" name="git">
+                      </label>
+                      <label class="ad-skills__label" for="skill-gulp"><span class="ad-skills__span">Gulp</span>
+                        <input class="ad-skills__input" id="skill-gulp" type="text" name="gulp">
+                      </label>
+                      <label class="ad-skills__label" for="skill-bower"><span class="ad-skills__span">Bower</span>
+                        <input class="ad-skills__input" id="skill-bower" type="text" name="bower">
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <input class="ad-btn" type="submit" value="Сохранить">
+              </form>
+            </div>
+          </li>
+          <li class="ad-change__items" id="tab-2">
+            <div class="ad-change__content">
+              <h2 class="ad-change__title">Страница Блог</h2>
+              <form class="ad-form" id="add-post" method="post" action="">
+                <h3 class="ad-skills__title">Добавить запись</h3>
+                <label class="ad-add__label" for="add-title">
+                  <input class="ad-add__input" type="text" id="add-title" name="title" placeholder="Названия">
+                </label>
+                <label class="ad-add__label" for="add-date">
+                  <input class="ad-add__input" type="text" id="add-date" name="date" placeholder="Дата">
+                </label>
+                <label class="ad-add__label" for="add-post">
+                  <textarea class="ad-add__text" name="text" id="add-post" cols="30" rows="10" placeholder="Содержание"></textarea>
+                </label>
+                <input class="ad-btn" type="submit" value="Добавить">
+              </form>
+            </div>
+          </li>
+          <li class="ad-change__items" id="tab-3">
+            <div class="ad-change__content">
+              <h2 class="ad-change__title">Страница Мои работы</h2>
+              <form class="ad-form" id="add-post" method="post" action="">
+                <h3 class="ad-skills__title">Добавить работу</h3>
+                <label class="ad-add__label">
+                  <input class="ad-add__input" type="text" name="title" placeholder="Названия проекта">
+                </label>
+                <label class="ad-add__label">
+                  <input class="ad-add__input" type="text" name="technology" placeholder="Технологии">
+                </label>
+                <label class="ad-add__label">
+                  <input class="ad-add__input ad-add__file" type="file" name="image" placeholder="Загрузить картинку">
+                </label>
+                <input class="ad-btn" type="submit" value="Добавить">
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

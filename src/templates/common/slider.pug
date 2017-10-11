@@ -1,32 +1,56 @@
 section.slider
-    .slider__desc
-        h2.sub-title.sub-title--slider Сайт школы онлайн образования
-        .slider__desc-text html, Css, Javascript
-        a.slider__main-link(href="#") Посмотреть сайт
+  .slider__left
+    button.slider__btn
+      svg.slider__arrow-left
+        use(xlink:href="images/sprites/symbol/sprite.svg#arrow_down")
+  .slider__center
+    ul.slider__list
+      li.slider__items.slider--active
+        .slider__image
+          img.slider__pic(src="images/works/work-1.png" alt="Пример работы")
+        .slider__info
+          h2.sub-title.sub-title--slider Сайт школы онлайн образования
+          .slider__info-text html, Css, Javascript
+          a.slider__main-link(href="#",target="blanc") Посмотреть сайт
             svg.slider__main-link__svg
-                use(xlink:href="images/sprites/symbol/sprite.svg#link")
-    .slider__view
-        img.slider__big-img(src="images/works/work2-1.png")
-    .slider__btn
-      .slider__btn-left
-        ul.slider__list-left
-          li.slider__items-left
-            img.slider__img(src="images/works/work2-1.png")
-          li.slider__items-left
-            img.slider__img(src="images/works/work2-2.png")
-          li.slider__items-left.slider--active-left
-            img.slider__img(src="images/works/work2-3.png")
-        button#slider__btn--prev
-          svg.slider__svg
-            use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_down")
-      .slider__btn-right
-        ul.slider__list-right
-          li.slider__items-right
-            img.slider__img(src="images/works/work2-1.png")
-          li.slider__items-right.slider--active-right
-            img.slider__img(src="images/works/work2-2.png")
-          li.slider__items-right
-            img.slider__img(src="images/works/work2-3.png")
-        button#slider__btn--next
-          svg.slider__svg
-            use(xlink:href="images/sprites/symbol/sprite.svg#portf_arrow_up")
+              use(xlink:href="images/sprites/symbol/sprite.svg#link")
+      li.slider__items
+        .slider__image
+          img.slider__pic(src="images/works/work-2.png" alt="Пример работы")
+        .slider__info
+          h2.sub-title.sub-title--slider Сайт школы онлайн образования
+          .slider__info-text html, Css, Javascript
+          a.slider__main-link(href="#",target="blanc") Посмотреть сайт
+            svg.slider__main-link__svg
+              use(xlink:href="images/sprites/symbol/sprite.svg#link")
+      li.slider__items
+        .slider__image
+          img.slider__pic(src="images/works/work-3.png" alt="Пример работы")
+        .slider__info
+          h2.sub-title.sub-title--slider Сайт школы онлайн образования
+          .slider__info-text html, Css, Javascript
+          a.slider__main-link(href="#",target="blanc") Посмотреть сайт
+            svg.slider__main-link__svg
+              use(xlink:href="images/sprites/symbol/sprite.svg#link")
+      li.slider__items
+        .slider__image
+          img.slider__pic(src="images/works/work-4.png" alt="Пример работы")
+        .slider__info
+          h2.sub-title.sub-title--slider Сайт школы онлайн образования
+          .slider__info-text html, Css, Javascript
+          a.slider__main-link(href="#",target="blanc") Посмотреть сайт
+            svg.slider__main-link__svg
+              use(xlink:href="images/sprites/symbol/sprite.svg#link")
+    ul.slider-nav
+      li.slider-nav__items.nav--active
+        a.slider-nav__btn(href="#")
+      li.slider-nav__items
+        a.slider-nav__btn(href="#")
+      li.slider-nav__items
+        a.slider-nav__btn(href="#")
+      li.slider-nav__items
+        a.slider-nav__btn(href="#")
+  .slider__right
+    button.slider__btn.slider__btn--next
+      svg.slider__arrow-right
+        use(xlink:href="images/sprites/symbol/sprite.svg#arrow_down")

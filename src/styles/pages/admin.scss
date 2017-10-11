@@ -1,0 +1,158 @@
+.ad-header {
+    height: 10vh;
+    background: $mintBlue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.ad-header__title {
+    color: #fff;
+}
+.ad-content {
+    height: 90vh;
+    min-height: 500px;
+    font-family: 'RobotoRegular';
+    font-size: 16px;
+    color: $textColor;
+}
+.ad-controls {
+    height: 60px;
+    background: #f0efe9;
+    display: flex;
+    flex-direction: row;
+
+    &__items {
+
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 60px;
+        width: 180px;
+        color: $textColor;
+        font-family: 'RobotoBold';
+        text-transform: uppercase;
+
+        &:hover {
+            color: $mintBlue;
+            background: #fff;
+        }
+    }
+}
+.ad-controls__link--active {
+    color: $mintBlue;
+    background: #fff;
+}
+
+.ad-change {
+    height: 100%;
+    background: url('../images/bg-index.jpg') center no-repeat;
+    background-size: cover;
+    // border: 1px solid black;
+
+    &__title {
+        width: 100%;
+        padding: 50px 0;
+    }
+
+    &__items {
+        display: none;
+        background: rgba(255,255,255,.8);
+        height: 100%;
+        padding-left: 30px;
+        // border: 1px solid red;
+    }
+}
+
+.ad-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+//Редактирование Скиллов
+.ad-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__items {
+        margin-right: 100px;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: rgba(0,0,0,.1);
+    }
+}
+.ad-skills__title {
+    margin-bottom: 15px;
+}
+.ad-skills__content {
+    margin-left: 20px;
+    width: 200px;
+    // border: 1px solid black;
+}
+.ad-skills__label {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    // border: 1px solid red;
+    position: relative;
+
+    &::after {
+        content: '%';
+        position: absolute;
+        left: 100%;
+    }
+}
+.ad-skills__input {
+    font-family: 'RobotoRegular';
+    font-size: 16px;
+    width: 50px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+}
+.ad-btn {
+    background: $mintBlue;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'RobotoRegular';
+    color: #fff;
+    cursor: pointer;
+}
+
+
+// Добавления Поста
+.ad-add__label {
+    margin-bottom: 20px;
+}
+.ad-add__input, .ad-add__text{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.ad-add__input {
+    width: 300px;
+    
+}
+.ad-add__text {
+    width: 500px;
+}
+.ad-add__file {
+    
+}
+

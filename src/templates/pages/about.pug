@@ -4,6 +4,7 @@ block variables
     - var title = 'About me'
 
 block content
+    include ../common/preloader.pug
     .wrapper
         include ../common/header.pug
         main.main#main
@@ -15,11 +16,11 @@ block content
                 .about__left
                     .about__title
                         .block-title.block-title--about
-                            img.block-title__img(src="images/svg/about_header.svg")
+                            img.block-title__img(src="images/svg/about_header.svg" alt="Обо мне")
                             h1.main-title Обо мне
                     .about__info
                         .about__img
-                            img.about__avatar(src="images/img/avatar2.jpg")
+                            img.about__avatar(src="images/img/avatar2.jpg" alt="Олег Снига")
                         h2.sub-title.sub-title--margin Кто я
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!
@@ -89,7 +90,7 @@ block content
                                         circle.circles__svg-second(r="45",cx="50%",cy="50%",transform="rotate(-90 55 55)",data-skill="95")
                                     span.circles__text Bower
             section.contacts
-                .google-map
+                .google-map#map
                 .data-contact
                     h2.sub-title Контакты
                     ul.data-contact__list
@@ -102,8 +103,11 @@ block content
                         li.data-contact__items +34 649 42 14 14
                             svg.data-contact__svg
                                 use(xlink:href="images/sprites/symbol/sprite.svg#phone")
-                        li.data-contact__items Испания, обл. Таррагона, г. Торредембарра
+                        li.data-contact__items Испания, Таррагона
                             svg.data-contact__svg
                                 use(xlink:href="images/sprites/symbol/sprite.svg#map_marker")
+
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATx75GpOk1a9IKUQtYPVcgq96q6fpQd2g&callback=initMap")
+    script(src="/js/map.js" defer)
 block footer
     include ../common/footer.pug

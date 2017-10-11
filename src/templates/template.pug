@@ -1,7 +1,7 @@
 block variables
 
 doctype html
-html
+html(lang="ru")
     head
         meta(charset="utf-8")
         title #{title}
@@ -13,16 +13,6 @@ html
         link(rel="stylesheet", href="/styles/main.min.css")
         script(src="/js/bundle.js" defer)
     body
-        .preloader
-            .preloader__cont
-                .preloader__circle.preloader__circle-1
-                .preloader__circle.preloader__circle-2
-                .preloader__circle.preloader__circle-3
-                span.preloader__percent 0%
-        .modal
-            .modal__content
-                .modal__msg Сообщение
-                button.modal__btn Закрить
         block content
         
         block footer

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>About me</title>
@@ -17,12 +17,6 @@
         <div class="preloader__circle preloader__circle-1"></div>
         <div class="preloader__circle preloader__circle-2"></div>
         <div class="preloader__circle preloader__circle-3"></div><span class="preloader__percent">0%</span>
-      </div>
-    </div>
-    <div class="modal">
-      <div class="modal__content">
-        <div class="modal__msg">Сообщение</div>
-        <button class="modal__btn">Закрить</button>
       </div>
     </div>
     <div class="wrapper">
@@ -55,9 +49,9 @@
         <div class="header__center">
           <div class="author-info">
             <div class="welkome__img">
-              <div class="welkome__pic"><img class="welkome__ava" src="images/img/avatar2.jpg"></div>
+              <div class="welkome__pic"><img class="welkome__ava" src="images/img/avatar2.jpg" alt="Oleg Sniga"></div>
             </div>
-            <h1>Олег Снига</h1>
+            <h2>Олег Снига</h2>
             <p>Личный сайт веб разработчика</p>
           </div>
         </div>
@@ -76,12 +70,12 @@
           </div>
           <div class="about__left">
             <div class="about__title">
-              <div class="block-title block-title--about"><img class="block-title__img" src="images/svg/about_header.svg">
+              <div class="block-title block-title--about"><img class="block-title__img" src="images/svg/about_header.svg" alt="Обо мне">
                 <h1 class="main-title">Обо мне</h1>
               </div>
             </div>
             <div class="about__info">
-              <div class="about__img"><img class="about__avatar" src="images/img/avatar2.jpg"></div>
+              <div class="about__img"><img class="about__avatar" src="images/img/avatar2.jpg" alt="Олег Снига"></div>
               <h2 class="sub-title sub-title--margin">Кто я</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veritatis natus voluptatibus quasi corporis in harum cum itaque laboriosam quidem doloribus hic qui molestiae alias accusantium quis id praesentium odit!</p>
@@ -173,7 +167,7 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="google-map"></div>
+          <div class="google-map" id="map"></div>
           <div class="data-contact">
             <h2 class="sub-title">Контакты</h2>
             <ul class="data-contact__list">
@@ -192,7 +186,7 @@
                   <use xlink:href="images/sprites/symbol/sprite.svg#phone"></use>
                 </svg>
               </li>
-              <li class="data-contact__items">Испания, обл. Таррагона, г. Торредембарра
+              <li class="data-contact__items">Испания, Таррагона
                 <svg class="data-contact__svg">
                   <use xlink:href="images/sprites/symbol/sprite.svg#map_marker"></use>
                 </svg>
@@ -202,6 +196,8 @@
         </section>
       </main>
     </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATx75GpOk1a9IKUQtYPVcgq96q6fpQd2g&amp;callback=initMap"></script>
+    <script src="/js/map.js" defer></script>
     <footer class="footer">
       <div class="footer__top">
         <ul class="footer-nav">

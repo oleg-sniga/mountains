@@ -4,6 +4,8 @@ block variables
     - var title = 'Мои Работы'
 
 block content
+    include ../common/preloader.pug
+    include ../common/modal.pug
     .wrapper
         include ../common/header.pug
         main.main#main
@@ -12,22 +14,22 @@ block content
                     svg.triangles__svg(xmlns="http://www.w3.org/2000/svg",viewbox="0 0 1000 85",preserveaspectratio="none")
                             polygon.triangles__left.works--triangles-fill(points="0,0 0,86 500.8,86 500.8,75.5")
                             polygon.triangles__right.works--triangles-fill(points="1000,0 1000,86 500,86 500,75.5")
-                img.block-title__img(src="images/svg/works_header.svg")
+                img.block-title__img(src="images/svg/works_header.svg" alt="work")
                 h1.main-title Мои работы
-            include ../common/slider3.pug
+            include ../common/slider.pug
             .block-title.block-title--bg-white
-                img.block-title__img(src="images/svg/about_header.svg")
+                img.block-title__img(src="images/svg/about_header.svg" alt="about me")
                 h2.main-title Что обо мне<br>говорят
             section.reviews
                 .reviews__blur-bg
-                    img.reviews__blur-bg-img(src="images/bg-works2.jpg")
+                    img.reviews__blur-bg-img(src="images/bg-works2.jpg" alt="Picture of mountains")
                 .reviews__top
                     .comment
                         .comment__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                         .comment__info
                             .comment__img
                                 .comment__pic
-                                    img.comment__avatar(src="images/img/user-1.jpg")
+                                    img.comment__avatar(src="images/img/user-1.jpg" alt="user image")
                             .comment__author
                                 .comment__name Ковальчук Дмитрий
                                 .comment__job основатель Loftschool
@@ -36,7 +38,7 @@ block content
                         .comment__info
                             .comment__img
                                 .comment__pic
-                                    img.comment__avatar(src="images/img/user-2.jpg")
+                                    img.comment__avatar(src="images/img/user-2.jpg" alt="user image")
                             .comment__author
                                 .comment__name Сабанцев Владимир
                                 .comment__job преподаватель

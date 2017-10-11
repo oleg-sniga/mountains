@@ -1,0 +1,91 @@
+extends ../template
+
+block variables
+    - var title = "Админка"
+
+block content
+    .wrapper
+        .ad-header
+            h1.ad-header__title Панель администратора
+            a.ad-header__link(href="/") Вернуться на сайт
+
+        .ad-content
+            ul.ad-controls
+                li.ad-controls__items
+                    a.ad-controls__link.ad-controls__link--active(href="#tab-1") Tab 1
+                li.ad-controls__items
+                    a.ad-controls__link(href="#tab-2") Tab 2
+                li.ad-controls__items
+                    a.ad-controls__link(href="#tab-3") Tab 3
+                li.ad-controls__items
+                    a.ad-controls__link(href="#tab-4") Tab 4
+            ul.ad-change
+                li.ad-change__items#tab-1
+                    .ad-change__content
+                        h2.ad-change__title Страница «Обо мне»
+                        form.ad-form#form-skills(method="post")
+                            ul.ad-skills
+                                li.ad-skills__items
+                                    h3.ad-skills__title Frontend
+                                    .ad-skills__content
+                                        label.ad-skills__label(for="skill-html")
+                                            span.ad-skills__span Html
+                                            input.ad-skills__input#skill-html(type="text",name="html")
+                                        label.ad-skills__label(for="skill-css")
+                                            span.ad-skills__span CSS
+                                            input.ad-skills__input#skill-css(type="text",name="css")
+                                        label.ad-skills__label(for="skill-js")
+                                            span.ad-skills__span JavaScript
+                                            input.ad-skills__input#skill-js(type="text",name="js")
+                                li.ad-skills__items
+                                    h3.ad-skills__title Backend
+                                    .ad-skills__content
+                                        label.ad-skills__label(for="skill-php")
+                                            span.ad-skills__span PHP
+                                            input.ad-skills__input#skill-php(type="text",name="php")
+                                        label.ad-skills__label(for="skill-mysql")
+                                            span.ad-skills__span mySQL
+                                            input.ad-skills__input#skill-mysql(type="text",name="mysql")
+                                        label.ad-skills__label(for="skill-node")
+                                            span.ad-skills__span Node.js
+                                            input.ad-skills__input#skill-node(type="text",name="node")
+                                        label.ad-skills__label(for="skill-mongo")
+                                            span.ad-skills__span Mongo.db
+                                            input.ad-skills__input#skill-mongo(type="text",name="mongo")
+                                li.ad-skills__items
+                                    h3.ad-skills__title Workflow
+                                    .ad-skills__content
+                                        label.ad-skills__label(for="skill-git")
+                                            span.ad-skills__span Git
+                                            input.ad-skills__input#skill-git(type="text",name="git")
+                                        label.ad-skills__label(for="skill-gulp")
+                                            span.ad-skills__span Gulp
+                                            input.ad-skills__input#skill-gulp(type="text",name="gulp")
+                                        label.ad-skills__label(for="skill-bower")
+                                            span.ad-skills__span Bower
+                                            input.ad-skills__input#skill-bower(type="text",name="bower")
+                            input.ad-btn(type="submit",value="Сохранить")
+                li.ad-change__items#tab-2
+                    .ad-change__content
+                        h2.ad-change__title Страница Блог
+                        form.ad-form#add-post(method="post",action="")
+                            h3.ad-skills__title Добавить запись
+                            label.ad-add__label(for="add-title")
+                                input.ad-add__input(type="text",id="add-title",name="title",placeholder="Названия")
+                            label.ad-add__label(for="add-date")
+                                input.ad-add__input(type="text",id="add-date",name="date",placeholder="Дата")
+                            label.ad-add__label(for="add-post")
+                                textarea.ad-add__text(name="text",id="add-post", cols="30", rows="10",placeholder="Содержание")
+                            input.ad-btn(type="submit",value="Добавить")
+                li.ad-change__items#tab-3
+                    .ad-change__content
+                        h2.ad-change__title Страница Мои работы
+                        form.ad-form#add-post(method="post",action="")
+                            h3.ad-skills__title Добавить работу
+                            label.ad-add__label
+                                input.ad-add__input(type="text",name="title",placeholder="Названия проекта")
+                            label.ad-add__label
+                                input.ad-add__input(type="text",name="technology",placeholder="Технологии")
+                            label.ad-add__label
+                                input.ad-add__input.ad-add__file(type="file",name="image",placeholder="Загрузить картинку")
+                            input.ad-btn(type="submit",value="Добавить")
