@@ -50,6 +50,43 @@ function contactForm(){
       if (checkEmail=='OK'){
         if (checkMsg=='OK'){
 
+              var request = ajaxForm(form);
+
+              request.done(function(msg) {
+                  var mes = msg.mes,
+                      status = msg.status;
+                      console.log(mes);
+                      
+                  if (status == 'OK') {
+                    modalMsg(mes);
+                      // form.append('<p class="success">' + mes + '</p>');
+                  } else{
+                    modalMsg(mes);
+                      // form.append('<p class="error">' + mes + '</p>');
+                  }
+              });
+          
+              request.fail(function(jqXHR, textStatus) {
+                  modalMsg(mes);
+                  // alert("Request failed: " + textStatus);
+              });
+          
+          var ajaxForm = function (form) {
+          
+              var url = form.attr('action'),
+                  data = form.serialize();
+              return $.ajax({
+                  type: 'POST',
+                  url: url,
+                  data: data,
+                  dataType: 'JSON'
+              });
+          }
+
+
+
+
+
         } else {modalMsg(checkMsg);}
       } else {modalMsg(checkEmail);}
     } else {modalMsg(checkName);}
